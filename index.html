@@ -6,12 +6,12 @@
   <title>FinOps++</title>
   <!-- Bootstrap CSS for styling and collapse functionality -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS with neon green styling, dark theme -->
+  <!-- Custom CSS with white background and black text -->
   <style>
     body { 
-      background: #121212; 
+      background: #ffffff; 
       font-family: Tahoma, sans-serif;
-      color: #39FF14; /* Neon green */
+      color: #000000; /* Black text */
       padding-bottom: 2rem;
     }
     /* Non-heading text normal weight */
@@ -19,7 +19,7 @@
       font-weight: normal; 
     }
     a { 
-      color: #39FF14; 
+      color: #0000EE; /* Default link blue */
       text-decoration: none;
     }
     a:hover { 
@@ -28,8 +28,8 @@
     /* Header styling */
     .header {
       text-align: center;
-      padding: 3rem 0;
-      border-bottom: 3px solid #0d6efd;
+      padding: 2rem 0;
+      border-bottom: 3px solid #000;
       margin-bottom: 2rem;
     }
     .header h1 {
@@ -41,31 +41,31 @@
     }
     .header p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #333;
     }
     /* Card styling */
     .section-card { 
       margin-bottom: 1.5rem; 
-      border: 1px solid #333;
-      background: #1e1e1e;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      border: 1px solid #ccc;
+      background: #ffffff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .card-header { 
-      background-color: #0d6efd; 
-      color: #fff; 
+      background-color: #f0f0f0; 
+      color: #000;
       cursor: pointer;
       user-select: none;
       text-transform: uppercase;
       font-weight: bold;
       padding: 0.75rem 1.25rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #ccc;
     }
     .card-header:hover { 
-      background-color: #0b5ed7; 
+      background-color: #e0e0e0; 
     }
     .card-body { 
-      background: #1e1e1e; 
-      color: #39FF14;
+      background: #ffffff; 
+      color: #000;
       padding: 1rem 1.25rem;
     }
     .instruction { 
@@ -73,28 +73,30 @@
       margin-bottom: 1rem; 
     }
     .form-control {
-      background: #2c2c2c;
-      border: 1px solid #555;
-      color: #39FF14;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      color: #000;
     }
     .form-control:focus {
-      background: #2c2c2c;
-      border-color: #0d6efd;
+      background: #ffffff;
+      border-color: #000;
       box-shadow: none;
-      color: #39FF14;
+      color: #000;
     }
     .btn {
-      border: none;
+      border: 1px solid #000;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      background: #f8f8f8;
+      color: #000;
     }
     footer { 
       text-align: center; 
       padding: 1rem 0; 
       margin-top: 2rem; 
-      background: #1e1e1e; 
-      color: #39FF14;
-      border-top: 1px solid #333;
+      background: #ffffff; 
+      color: #000;
+      border-top: 1px solid #ccc;
     }
     /* Extra spacing for exported PDF */
     .export-margin { margin-bottom: 12px; }
@@ -118,10 +120,19 @@
       <div id="overviewSection" class="collapse show">
         <div class="card-body">
           <p>
-            Cloud computing offers scalable, on‑demand resources—but its dynamic pricing and tiered discount models can lead to unexpected expenses. FinOps++ helps you build detailed cost models and forecasts for strategic budgeting.
+            Cloud computing has transformed the way businesses operate by providing scalable, on‑demand resources. However, with flexibility comes complexity—dynamic pricing models, tiered discounts, and variable usage patterns can easily lead to unforeseen expenses. FinOps++ is engineered to bring clarity to this complexity by integrating live pricing data (when available) and fallback values from major cloud providers, enabling you to build detailed cost models and forecasts that are essential for strategic budgeting and financial planning.
           </p>
           <p>
-            Break down your spend into compute, storage, network, and licensing costs. Advanced settings let you simulate auto‑scaling and dynamic pricing adjustments. With forecasting, Monte Carlo simulations, and sensitivity analysis, you gain actionable insights to prevent budget overruns.
+            This tool breaks down your overall cloud spending into key components such as compute, storage, network, and licensing. By mirroring real-world pricing structures, FinOps++ allows you to see how exceeding certain usage thresholds can trigger discount tiers or drive costs upward, providing you with actionable insights.
+          </p>
+          <p>
+            With robust forecasting capabilities, you can project your cloud expenditures over a 12‑month period based on expected growth rates. The platform also includes Monte Carlo simulations to statistically model uncertainty and risk, while sensitivity analysis identifies which variables have the greatest impact on your overall costs.
+          </p>
+          <p>
+            FinOps++ isn’t just a calculator—it’s a comprehensive, interactive platform that educates both IT and finance teams on cloud cost dynamics. Detailed explanations for every variable and a suite of advanced simulation tools empower you to make data‑driven decisions, negotiate better pricing with providers, and proactively manage your budget.
+          </p>
+          <p>
+            Whether you’re a startup deploying your first cloud solution or a large enterprise managing a multi‑cloud strategy, FinOps++ equips you with the insights needed to prevent budget overruns, optimize resource allocation, and improve operational efficiency. It turns reactive cost management into a proactive strategic advantage.
           </p>
         </div>
       </div>
@@ -135,17 +146,43 @@
       <div id="useCaseSection" class="collapse show">
         <div class="card-body">
           <p>
-            <strong>Scenario:</strong> As the CFO of "CloudSavvy Retail," a marketing campaign triggers a 300% surge in traffic that overwhelms your cloud resources.
+            <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," an e‑commerce company that relies on cloud services to host its website, manage customer data, and process transactions. After launching a major marketing campaign, your website experiences a 300% surge in traffic. This sudden spike in demand causes your cloud usage to skyrocket—particularly in compute, storage, and network services—resulting in significant cost overages that threaten to derail your quarterly budget.
+          </p>
+          <p>
+            <strong>Step‑by‑Step Process Using FinOps++:</strong>
           </p>
           <ol>
-            <li><strong>Data Entry:</strong> Enter fixed costs and revenue assumptions to establish a baseline.</li>
-            <li><strong>Cost Modeling:</strong> Input detailed costs for compute, storage, network, and licensing using tiered discounts.</li>
-            <li><strong>Advanced Settings:</strong> Adjust auto‑scaling and dynamic pricing parameters to simulate cost‑saving strategies.</li>
-            <li><strong>Calculations &amp; Forecasting:</strong> Run deterministic calculations and 12‑month forecasts to gauge financial impact.</li>
-            <li><strong>Simulations &amp; Sensitivity:</strong> Use Monte Carlo simulations and sensitivity analysis to quantify risk and identify key cost drivers.</li>
+            <li>
+              <strong>Baseline Data Entry:</strong>
+              <br>Enter your fixed operational costs (such as server management fees and licensing) along with revenue assumptions (average revenue per transaction and expected transaction volume). This establishes your financial baseline.
+            </li>
+            <li>
+              <strong>Detailed Cost Modeling:</strong>
+              <br>Input the costs for each cloud service category—compute, storage, network, and licensing—using tiered discount models that mirror your provider’s pricing. This reveals which components drive the majority of your expenses.
+            </li>
+            <li>
+              <strong>Advanced Settings:</strong>
+              <br>Configure advanced parameters like the Auto‑Scaling Factor (to lower compute costs when resources scale efficiently) and Dynamic Pricing Adjustment (to simulate revenue boosts during high‑demand periods). These settings let you experiment with strategies to mitigate overages.
+            </li>
+            <li>
+              <strong>Deterministic Calculation:</strong>
+              <br>Run the deterministic calculation to obtain key metrics—total revenue, total cost, profit, profit margin, and ROI. This gives you an immediate snapshot of the financial impact of the surge.
+            </li>
+            <li>
+              <strong>Forecasting Future Costs:</strong>
+              <br>Use the forecasting module to project your cloud costs over the next 12 months based on your expected monthly growth rate. This projection helps you plan for additional resources or budget adjustments.
+            </li>
+            <li>
+              <strong>Monte Carlo Simulation:</strong>
+              <br>Run thousands of simulation iterations to create a probability distribution of potential outcomes. This statistical analysis quantifies risk and aids in setting aside contingency funds.
+            </li>
+            <li>
+              <strong>Sensitivity Analysis:</strong>
+              <br>Perform sensitivity analysis on key variables—by varying the Compute Tier 1 discount rate—to determine which factors most affect your costs. Use these insights to negotiate improved pricing or adjust internal processes.
+            </li>
           </ol>
           <p>
-            <strong>Outcome:</strong> With clear insights, you renegotiate discounts, optimize resource allocation, and adjust forecasts to prevent future overages.
+            <strong>Outcome:</strong> By following these steps, you gain a clear understanding of the factors behind your unexpected cost overages. This enables you to renegotiate volume discounts, fine‑tune auto‑scaling policies, and revise your budget forecasts—turning a potential crisis into a strategic opportunity.
           </p>
         </div>
       </div>
@@ -164,9 +201,9 @@
             <li><strong>Revenue Units:</strong> Total units consumed.</li>
             <li><strong>Elasticity Threshold:</strong> Usage level where revenue per unit declines.</li>
             <li><strong>Elasticity Factor:</strong> Decrease in revenue per additional unit beyond threshold.</li>
-            <li><strong>Cost Categories:</strong> Fixed and variable costs for compute, storage, network, and licensing.</li>
-            <li><strong>Monthly Growth Rate:</strong> Expected increase in usage and costs month-over-month.</li>
-            <li><strong>Simulation Iterations:</strong> Number of runs in Monte Carlo simulation.</li>
+            <li><strong>Cost Categories:</strong> Fixed and variable costs for compute, storage, network, and licensing with tiered discounts.</li>
+            <li><strong>Monthly Growth Rate:</strong> Expected increase in usage and costs month‑over‑month.</li>
+            <li><strong>Simulation Iterations:</strong> Number of runs in a Monte Carlo simulation.</li>
             <li><strong>Cost &amp; Revenue Variability:</strong> Expected fluctuations due to market conditions.</li>
           </ul>
         </div>
@@ -222,7 +259,7 @@
             </div>
             <div id="computeSection" class="collapse show">
               <div class="card-body">
-                <p class="instruction">Enter compute costs with tiered discounting.</p>
+                <p class="instruction">Enter compute costs (e.g., server hours) with tiered discounting.</p>
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="computeFixed">Fixed Cost ($):</label>
@@ -267,7 +304,7 @@
             </div>
             <div id="storageSection" class="collapse show">
               <div class="card-body">
-                <p class="instruction">Enter storage costs with tiered discounting.</p>
+                <p class="instruction">Enter storage costs (e.g., GB used) with tiered discounting.</p>
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="storageFixed">Fixed Cost ($):</label>
@@ -312,7 +349,7 @@
             </div>
             <div id="networkSection" class="collapse show">
               <div class="card-body">
-                <p class="instruction">Enter network costs with tiered discounting.</p>
+                <p class="instruction">Enter network costs (e.g., GB transferred) with tiered discounting.</p>
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="networkFixed">Fixed Cost ($):</label>
@@ -427,7 +464,7 @@
       <div id="cloudPricingSection" class="collapse show">
         <div class="card-body">
           <p class="instruction">
-            Live pricing integration is not available at this time. Please refer to the Official Pricing Resources below.
+            Live pricing integration is not available at this time. Please refer to the Official Pricing Resources.
           </p>
         </div>
       </div>
@@ -473,7 +510,7 @@
       </div>
       <div id="simulationSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">Run a Monte Carlo simulation to assess uncertainty in your cost and revenue estimates.</p>
+          <p class="instruction">Run a Monte Carlo simulation to assess uncertainty in your estimates.</p>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="simIterations">Simulation Iterations:</label>
@@ -566,7 +603,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    // Persist inputs and textareas locally
+    // Persist inputs and textareas using localStorage
     function persistInputs() {
       const elements = document.querySelectorAll('input[type="number"], textarea');
       elements.forEach(el => {
@@ -576,19 +613,6 @@
       });
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
-    
-    // ---------- Helper: Compute Category Cost ----------
-    function computeCategoryCost(units, baseCost, tier1Threshold, tier1Rate, tier2Threshold, tier2Rate) {
-      if (units <= tier1Threshold) {
-        return units * baseCost;
-      } else if (units <= tier2Threshold) {
-        return tier1Threshold * baseCost + (units - tier1Threshold) * baseCost * (1 - tier1Rate / 100);
-      } else {
-        return tier1Threshold * baseCost +
-               (tier2Threshold - tier1Threshold) * baseCost * (1 - tier1Rate / 100) +
-               (units - tier2Threshold) * baseCost * (1 - tier2Rate / 100);
-      }
-    }
     
     // ---------- Deterministic Calculation ----------
     document.getElementById('calculateBtn').addEventListener('click', () => {
@@ -685,7 +709,7 @@ Cost Breakdown:
       const baseRate = parseFloat(document.getElementById('computeTier1Rate').value);
       const sensitivityData = [];
       const sensitivityLabels = [];
-      // Vary Compute Tier 1 discount from (base - 5) to (base + 5)
+      // Vary Compute Tier 1 discount from (baseRate - 5) to (baseRate + 5)
       for (let delta = -5; delta <= 5; delta += 1) {
         const testRate = baseRate + delta;
         const computeFixed = parseFloat(document.getElementById('computeFixed').value);
@@ -708,7 +732,7 @@ Cost Breakdown:
         }
         const totalRevenue = revenueUnits * effectiveRevenuePerUnit;
         
-        // Assume storage, network, and license remain unchanged
+        // Assume storage, network, and license remain unchanged (use deterministic calc values)
         const storageCost = parseFloat(document.getElementById('storageFixed').value) +
           computeCategoryCost(
             parseFloat(document.getElementById('storageUnits').value),
@@ -755,8 +779,8 @@ Cost Breakdown:
     async function exportReport() {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
-      // Set text color to cyan for PDF output
-      doc.setTextColor(0, 255, 255);
+      // Set exported text color to black
+      doc.setTextColor(0, 0, 0);
       let yPos = 15;
       
       // Title
