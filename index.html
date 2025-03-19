@@ -6,22 +6,73 @@
   <title>Ultra‑Sophisticated FinOps Calculator</title>
   <!-- Bootstrap CSS for modern styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Google Fonts for a techie monospace look -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <style>
-    body { background: #f4f7f9; }
+    body { 
+      background: #121212; 
+      font-family: 'Roboto Mono', monospace; 
+      color: #e0e0e0;
+    }
     .header {
-      background: linear-gradient(135deg, #007bff, #00c851);
-      color: white;
+      background: linear-gradient(135deg, #00f0ff, #ff00f7);
+      color: #121212;
       padding: 2rem 0;
       margin-bottom: 2rem;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }
-    .section-card { margin-bottom: 2rem; }
-    .card-header { background-color: #007bff; color: white; }
-    .instruction { font-size: 0.9rem; color: #555; margin-bottom: 1rem; }
-    .result { margin-top: 1rem; }
-    footer { text-align: center; padding: 1rem 0; margin-top: 2rem; background: #e9ecef; }
-    #exportReportBtn { margin-top: 1rem; }
+    .header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    .section-card { 
+      margin-bottom: 2rem; 
+      border: 1px solid #333;
+      background: #1e1e1e;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .card-header { 
+      background-color: #0d6efd; 
+      color: #ffffff; 
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px solid #333;
+    }
+    .card-body {
+      background: #1e1e1e;
+    }
+    .instruction { 
+      font-size: 0.9rem; 
+      color: #bbb; 
+      margin-bottom: 1rem; 
+    }
+    .form-control {
+      background: #2c2c2c;
+      border: 1px solid #555;
+      color: #e0e0e0;
+    }
+    .form-control:focus {
+      background: #2c2c2c;
+      border-color: #0d6efd;
+      box-shadow: none;
+      color: #fff;
+    }
+    .btn {
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    footer { 
+      text-align: center; 
+      padding: 1rem 0; 
+      margin-top: 2rem; 
+      background: #1e1e1e; 
+      color: #aaa;
+      border-top: 1px solid #333;
+    }
+    a { color: #0d6efd; }
   </style>
 </head>
 <body>
@@ -154,7 +205,7 @@
             </div>
           </div>
         </div>
-                <!-- Network Category -->
+        <!-- Network Category -->
         <div class="card mb-3">
           <div class="card-header">Network</div>
           <div class="card-body">
