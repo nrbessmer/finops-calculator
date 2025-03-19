@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinOps++</title>
+  <!-- Import Google Font (Roboto Mono) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS for collapse and layout -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS with muted white background and colored headers -->
+  <!-- Custom CSS with techie enhancements -->
   <style>
     body { 
       background: #f7f7f7; 
-      font-family: Tahoma, sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: #000;
       padding-bottom: 2rem;
     }
-    /* Ensure non-heading text is normal weight */
     p, li, label, input, button, textarea { 
-      font-weight: normal; 
+      font-weight: 400; 
     }
     a { 
       color: #0000EE; 
@@ -28,17 +29,19 @@
     /* Header styling */
     .header {
       text-align: center;
-      padding: 2rem 0;
+      padding: 2.5rem 0;
       border-bottom: 3px solid #4a90e2;
       margin-bottom: 2rem;
     }
     .header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #4a90e2;
+      font-weight: 700;
+      background: linear-gradient(45deg, #4a90e2, #50e3c2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .header p {
       font-size: 1.2rem;
@@ -52,17 +55,18 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
     .card-header { 
-      background-color: #4a90e2; 
+      background: linear-gradient(45deg, #4a90e2, #50e3c2);
       color: #fff; 
       cursor: pointer;
       user-select: none;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 700;
       padding: 0.75rem 1.25rem;
       border-bottom: 1px solid #ddd;
+      transition: background 0.3s ease;
     }
     .card-header:hover { 
-      background-color: #3b7cc4; 
+      background: linear-gradient(45deg, #3b7cc4, #3ce0aa);
     }
     .card-body { 
       background: #fff; 
@@ -102,7 +106,6 @@
       font-size: 0.8rem;
       font-family: Courier, monospace;
     }
-    /* Extra spacing for exported PDF */
     .export-margin { margin-bottom: 12px; }
   </style>
 </head>
@@ -114,7 +117,7 @@
       <p>Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
     </div>
   </div>
-
+  
   <div class="container">
     <!-- Overview Section (Not exported) -->
     <div class="card section-card">
@@ -141,7 +144,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Practical Use Cases Section (Not exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#useCaseSection" aria-expanded="true" aria-controls="useCaseSection">
@@ -158,7 +161,7 @@
           <ol>
             <li>
               <strong>Baseline Data Entry:</strong>
-              <br>Enter your fixed operational costs (such as server management fees and licensing) along with revenue assumptions (average revenue per transaction and expected transaction volume). This establishes your financial baseline.
+              <br>Enter your fixed operational costs (e.g., server management fees and licensing) along with revenue assumptions (average revenue per transaction and expected transaction volume). This establishes your financial baseline.
             </li>
             <li>
               <strong>Detailed Cost Modeling:</strong>
@@ -186,12 +189,12 @@
             </li>
           </ol>
           <p>
-            <strong>Outcome:</strong> With clear insights, you renegotiate volume discounts, optimize resource allocation, and adjust your forecasts to prevent future overages.
+            <strong>Outcome:</strong> By following these steps, you gain a clear understanding of your cost drivers. This enables you to renegotiate volume discounts, optimize resource allocation, and revise your budget forecasts—turning potential cost crises into strategic opportunities.
           </p>
         </div>
       </div>
     </div>
-
+    
     <!-- Variable Explanations Section (Not exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#variableSection" aria-expanded="true" aria-controls="variableSection">
@@ -213,7 +216,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Overall & Revenue Inputs Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#inputsSection" aria-expanded="true" aria-controls="inputsSection">
@@ -247,7 +250,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Cost Categories Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#costCategoriesSection" aria-expanded="true" aria-controls="costCategoriesSection">
@@ -439,7 +442,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Advanced Settings Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#advancedSection" aria-expanded="true" aria-controls="advancedSection">
@@ -459,7 +462,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Cloud Pricing Integration Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#cloudPricingSection" aria-expanded="true" aria-controls="cloudPricingSection">
@@ -473,7 +476,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Forecasting Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#forecastSection" aria-expanded="true" aria-controls="forecastSection">
@@ -491,7 +494,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Deterministic Calculation Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#deterministicSection" aria-expanded="true" aria-controls="deterministicSection">
@@ -506,7 +509,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Monte Carlo Simulation Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#simulationSection" aria-expanded="true" aria-controls="simulationSection">
@@ -535,7 +538,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Sensitivity Analysis Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#sensitivitySection" aria-expanded="true" aria-controls="sensitivitySection">
@@ -549,7 +552,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Notes Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#notesSection" aria-expanded="true" aria-controls="notesSection">
@@ -564,7 +567,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Export Report Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#exportSection" aria-expanded="true" aria-controls="exportSection">
@@ -572,12 +575,12 @@
       </div>
       <div id="exportSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">Generate a PDF report including Deterministic Results, Forecast Chart, Simulation Summary, Sensitivity Analysis, and your Notes. The report also displays the current date.</p>
+          <p class="instruction">Generate a PDF report including Deterministic Results, Forecast Chart, Monte Carlo Simulation Summary, Sensitivity Analysis, and User Notes. The report will display the current date.</p>
           <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
         </div>
       </div>
     </div>
-
+    
     <!-- Official Pricing Resources Section (Not exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#pricingResourcesSection" aria-expanded="true" aria-controls="pricingResourcesSection">
@@ -594,30 +597,34 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Footer -->
     <footer>
-      <p style="color: orange; font-family: Courier, monospace; font-size: 0.8rem;">
-        (c)(p) 2025 Tully EDM Vibe LLC All Rights Reserved. 
+      <p style="color: orange;">
+        (c)(p) 2025 Tully EDM Vibe LLC All Rights Reserved.
         <br>
         WARNING: These calculations are estimates. Users should conduct further analysis and vet these results. All risk is the user's responsibility as this tool is educational in nature.
       </p>
     </footer>
   </div>
-
+  
   <!-- Dependencies: jQuery, Bootstrap JS, Chart.js, jsPDF -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    // Persist inputs and textareas locally
+    // Persist inputs and textareas using localStorage
     function persistInputs() {
       const elements = document.querySelectorAll('input[type="number"], textarea');
       elements.forEach(el => {
         const stored = localStorage.getItem(el.id);
-        if (stored !== null) { el.value = stored; }
-        el.addEventListener('change', () => { localStorage.setItem(el.id, el.value); });
+        if (stored !== null) {
+          el.value = stored;
+        }
+        el.addEventListener('change', () => { 
+          localStorage.setItem(el.id, el.value); 
+        });
       });
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
@@ -998,11 +1005,11 @@ Standard Deviation: $${stdProfit.toFixed(2)}`;
     async function exportReport() {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
-      // Set exported text color to black
+      // Set text color to black
       doc.setTextColor(0, 0, 0);
       let yPos = 15;
       
-      // Add current date at top (formatted as YYYY-MM-DD)
+      // Add current date at top
       const currentDate = new Date().toISOString().split("T")[0];
       doc.setFontSize(10);
       doc.text("Date: " + currentDate, 10, yPos);
@@ -1057,6 +1064,7 @@ Standard Deviation: $${stdProfit.toFixed(2)}`;
       doc.text(notesLines, 10, yPos);
       yPos += notesLines.length * 6 + 4;
       
+      // Save PDF
       doc.save("FinOps_Report.pdf");
     }
     document.getElementById('exportReportBtn').addEventListener('click', exportReport);
