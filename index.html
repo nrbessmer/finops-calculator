@@ -4,68 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinOps++</title>
-  <!-- Bootstrap CSS for modern styling -->
+  <!-- Bootstrap CSS for modern styling and collapse functionality -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS using Tahoma -->
+  <!-- Custom CSS with neon green font and dark theme -->
   <style>
     body { 
       background: #121212; 
       font-family: Tahoma, sans-serif;
-      color: #e0e0e0;
+      color: #39FF14; /* Neon green */
       padding-bottom: 2rem;
     }
-    /* Header styling */
-    .header {
-      background: #222;
-      color: #f5f5f5;
-      padding: 3rem 0;
-      text-align: center;
-      border-bottom: 3px solid #0d6efd;
-      margin-bottom: 2rem;
-    }
-    .header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .header p {
-      font-size: 1.2rem;
-      margin: 0;
-      color: #ccc;
-    }
-    /* Section styling */
+    a { color: #39FF14; }
+    /* Card styling with neon accents */
     .section-card { 
-      margin-bottom: 2rem; 
+      margin-bottom: 1.5rem; 
       border: 1px solid #333;
       background: #1e1e1e;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
     }
     .card-header { 
       background-color: #0d6efd; 
-      color: #ffffff; 
+      color: #fff; 
+      cursor: pointer;
+      user-select: none;
       text-transform: uppercase;
       font-weight: bold;
       border-bottom: 1px solid #333;
     }
-    .card-body {
-      background: #1e1e1e;
+    .card-header:hover { background-color: #0b5ed7; }
+    .card-body { 
+      background: #1e1e1e; 
+      color: #39FF14;
     }
     .instruction { 
       font-size: 0.9rem; 
-      color: #bbb; 
+      color: #39FF14; 
       margin-bottom: 1rem; 
     }
     .form-control {
       background: #2c2c2c;
       border: 1px solid #555;
-      color: #e0e0e0;
+      color: #39FF14;
     }
     .form-control:focus {
       background: #2c2c2c;
       border-color: #0d6efd;
       box-shadow: none;
-      color: #fff;
+      color: #39FF14;
     }
     .btn {
       border: none;
@@ -77,319 +62,375 @@
       padding: 1rem 0; 
       margin-top: 2rem; 
       background: #1e1e1e; 
-      color: #aaa;
+      color: #39FF14;
       border-top: 1px solid #333;
     }
-    a { color: #0d6efd; }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <div class="header">
-    <h1>FinOps++</h1>
-    <p>Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
+  <!-- Header (always visible) -->
+  <div class="container">
+    <div class="header text-center" style="padding: 3rem 0; border-bottom: 3px solid #0d6efd; margin-bottom: 2rem;">
+      <h1 style="font-size: 3rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">FinOps++</h1>
+      <p style="font-size: 1.2rem; color: #ccc;">Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
+    </div>
   </div>
 
   <div class="container">
     <!-- Extended Overview Section -->
     <div class="card section-card">
-      <div class="card-header">Overview</div>
-      <div class="card-body">
-        <p>
-          Cloud computing has revolutionized the way organizations operate—offering unprecedented scalability, agility, and innovation. However, this transformative power comes with a complexity of pricing models, discount tiers, and variable cost structures that can easily lead to unexpected expenses if not managed carefully. FinOps++ was developed to address these challenges head on by providing a comprehensive, interactive platform to model, forecast, and simulate cloud costs in real time.
-        </p>
-        <p>
-          FinOps++ integrates live pricing data directly from major cloud providers (AWS, Azure, and GCP) so that every cost calculation reflects the most up-to-date market conditions. This live data integration ensures that your cost estimates are current, reducing the risk of budget overruns and enabling proactive financial planning.
-        </p>
-        <p>
-          The tool’s robust architecture allows you to break down cloud spending into granular components: compute, storage, network, and licensing. Each of these components can be modeled with tiered discount rates and usage thresholds that mirror real-world pricing structures. By simulating various scenarios, FinOps++ helps you understand how changes in workload, discount rates, or pricing strategies impact your overall spending.
-        </p>
-        <p>
-          With advanced forecasting capabilities, FinOps++ enables you to project cloud costs over a 12‑month period. By inputting your monthly growth rate, you can simulate future spending, identify potential cost overages, and plan strategically for capacity expansion or cost optimization initiatives.
-        </p>
-        <p>
-          Beyond static cost modeling, FinOps++ incorporates Monte Carlo simulations to account for uncertainty and variability in usage and pricing. This feature allows you to run thousands of iterations to generate a probability distribution of possible outcomes, thus quantifying risk and helping you plan for worst-case scenarios.
-        </p>
-        <p>
-          Sensitivity analysis is another critical feature that helps you pinpoint which variables most significantly affect your bottom line. By adjusting discount rates, thresholds, or variability factors, you can see in real time how sensitive your overall cost is to these changes—guiding negotiations and strategic decisions.
-        </p>
-        <p>
-          FinOps++ is not just a calculator—it’s an educational tool that provides detailed explanations for every variable and cost factor, ensuring that both technical and financial stakeholders are aligned. This clarity facilitates more effective communication between IT and finance teams, enabling them to work together to optimize cloud spending.
-        </p>
-        <p>
-          The platform is designed with scalability in mind. Whether you are a startup or a large enterprise, FinOps++ scales with your business needs by offering flexible input parameters and a modular design that adapts to different cloud pricing models.
-        </p>
-        <p>
-          By combining live pricing data, advanced simulation methods, and comprehensive forecasting tools, FinOps++ transforms the challenge of managing cloud expenses into a data-driven, actionable process. It empowers you to take control of your cloud costs, reduce financial risk, and make smarter strategic decisions.
-        </p>
-        <p>
-          Ultimately, FinOps++ is your partner in navigating the complex landscape of cloud financial management. With this tool, you can achieve greater transparency, optimize resource allocation, and ensure that your cloud investments are aligned with your overall business strategy.
-        </p>
+      <div class="card-header" data-toggle="collapse" data-target="#overviewSection" aria-expanded="true" aria-controls="overviewSection">
+        Overview
+      </div>
+      <div id="overviewSection" class="collapse show">
+        <div class="card-body">
+          <p>
+            Cloud computing has transformed modern business by providing scalable, on-demand resources—but it has also introduced complex, dynamic pricing structures that can lead to unforeseen expenses. FinOps++ is designed to help you manage these challenges by integrating live (or fallback) pricing data from major cloud providers, enabling you to build detailed cost models and forecasts that are critical for budgeting and strategic planning.
+          </p>
+          <p>
+            With FinOps++, you can decompose your overall cloud spend into granular components such as compute, storage, network, and licensing. The tool supports tiered discount models that accurately reflect real-world pricing schemes, giving you insight into how usage beyond certain thresholds can affect your overall cost structure. This allows you to evaluate various scenarios and negotiate better terms with your providers.
+          </p>
+          <p>
+            The platform also offers advanced forecasting capabilities, letting you project costs over a 12‑month period based on expected growth rates. Monte Carlo simulations help quantify the uncertainty and risk inherent in cloud cost estimates by running thousands of iterations, while sensitivity analyses pinpoint which parameters have the most impact on your financial outcomes.
+          </p>
+          <p>
+            FinOps++ is more than just a calculator—it’s an educational tool that demystifies cloud pricing and empowers both IT and finance teams to collaborate effectively. By providing clear variable definitions, practical examples, and advanced simulation tools, FinOps++ transforms cloud cost management from a reactive, ad-hoc process into a strategic, proactive discipline.
+          </p>
+          <p>
+            Whether you’re a startup testing your first cloud deployment or a large enterprise optimizing a multi-cloud strategy, FinOps++ equips you with the insights needed to avoid budget overruns, maximize ROI, and make data-driven decisions. It ultimately bridges the gap between technical complexity and financial clarity.
+          </p>
+          <p>
+            Embrace the power of proactive financial management with FinOps++—streamline your cloud operations, mitigate risks, and unlock the full potential of your cloud investments.
+          </p>
+        </div>
       </div>
     </div>
 
-    <!-- Detailed Practical Use Cases Section -->
+    <!-- Practical Use Cases Section -->
     <div class="card section-card">
-      <div class="card-header">Practical Use Cases</div>
-      <div class="card-body">
-        <p>
-          <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," a mid-sized e-commerce company that relies on cloud services for hosting its website, managing customer data, and processing transactions. Over the past quarter, a viral marketing campaign unexpectedly increased website traffic by 300%, leading to a surge in compute, storage, and network usage. This surge resulted in cloud cost overages that far exceeded your monthly budget and threatened to erode your profit margins.
-        </p>
-        <p>
-          <strong>Step 1: Data Input and Baseline Setup</strong><br>
-          You begin by launching FinOps++ and entering the overall fixed costs associated with your cloud operations. These costs include base server fees, management overhead, and baseline software licensing expenses. Next, you input revenue assumptions—detailing the average revenue per transaction and the expected number of transactions under normal conditions. You also set an elasticity threshold to account for how revenue per transaction decreases when usage exceeds expected limits.
-        </p>
-        <p>
-          <strong>Step 2: Detailed Cost Breakdown</strong><br>
-          FinOps++ allows you to break down your cloud spending into specific categories. For compute costs, you enter the fixed base cost and variable cost per compute hour along with tiered discount thresholds that mirror your cloud provider’s pricing model. Similarly, you enter costs for storage (GBs of data stored), network (data transferred), and licensing (software seats). This detailed breakdown helps you understand which area is the primary driver of cost overages.
-        </p>
-        <p>
-          <strong>Step 3: Running Deterministic Calculations</strong><br>
-          With all data in place, you run the deterministic calculation feature to obtain key metrics: total revenue, total cost, profit, profit margin, and ROI. This baseline analysis provides you with a snapshot of your current financial state and highlights the immediate impact of the unexpected surge in usage.
-        </p>
-        <p>
-          <strong>Step 4: Forecasting Future Costs</strong><br>
-          Anticipating that similar spikes could occur in the future, you use the forecasting module to project cloud costs over the next 12 months. By inputting your estimated monthly growth rate, FinOps++ generates a forecast that shows how costs might escalate if the current trend continues. This forecast helps you plan for additional budget allocation or cost-cutting measures.
-        </p>
-        <p>
-          <strong>Step 5: Monte Carlo Simulation for Risk Assessment</strong><br>
-          To address uncertainty, you run a Monte Carlo simulation that uses historical variability in cost and revenue data. This simulation runs thousands of iterations to provide a range of possible financial outcomes, quantifying the probability of further cost overages. Armed with this statistical risk assessment, you can make more informed decisions about setting aside contingency funds or adjusting operational practices.
-        </p>
-        <p>
-          <strong>Step 6: Sensitivity Analysis for Strategic Optimization</strong><br>
-          Finally, you perform a sensitivity analysis by varying key discount parameters—particularly those affecting compute costs. This analysis reveals that a modest improvement in discount rates (achievable through renegotiation with your provider) could significantly reduce overall expenses. As a result, you decide to engage with your cloud provider to explore better volume discounts or alternative pricing models.
-        </p>
-        <p>
-          <strong>Outcome:</strong> By following these steps with FinOps++, you not only gain a clear understanding of the factors driving your cloud cost overages but also develop actionable strategies to mitigate future risks. You implement changes to optimize resource allocation, secure more favorable pricing terms, and adjust your budget forecasts, thereby transforming a crisis into an opportunity for strategic improvement.
-        </p>
+      <div class="card-header" data-toggle="collapse" data-target="#useCaseSection" aria-expanded="true" aria-controls="useCaseSection">
+        Practical Use Cases
+      </div>
+      <div id="useCaseSection" class="collapse show">
+        <div class="card-body">
+          <p>
+            <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," an e-commerce company that depends on cloud services to host its website, manage customer data, and process transactions. After launching a major marketing campaign, your site experiences a sudden 300% surge in traffic. This spike in demand overwhelms your current cloud resources, resulting in unexpected cost overages that threaten your quarterly budget.
+          </p>
+          <p>
+            <strong>Step-by-Step Process Using FinOps++:</strong>
+          </p>
+          <ol>
+            <li>
+              <strong>Baseline Data Entry:</strong>  
+              <br>Begin by entering your fixed operational costs (such as server management fees and software licensing) and your revenue assumptions (average revenue per transaction and projected transaction volume). This sets the foundation of your cost model.
+            </li>
+            <li>
+              <strong>Detailed Cost Modeling:</strong>  
+              <br>Input the specific costs for each service category—compute (e.g., server hours), storage (GBs used), network (data transferred), and licensing (software seats). Use tiered discount thresholds to reflect the provider’s pricing model. This breakdown will help you identify which areas are most affected by the sudden surge.
+            </li>
+            <li>
+              <strong>Advanced Settings Configuration:</strong>  
+              <br>In the Advanced Settings section, specify parameters such as the Auto‑Scaling Factor (to reduce compute costs when resources are scaled efficiently) and the Dynamic Pricing Adjustment (to simulate a revenue boost under high-demand conditions). These advanced options let you experiment with different strategies to mitigate overages.
+            </li>
+            <li>
+              <strong>Deterministic Calculation:</strong>  
+              <br>Run the deterministic calculation to generate key financial metrics including total revenue, total cost, profit, profit margin, and ROI. This immediate feedback helps you understand the financial impact of the current usage surge.
+            </li>
+            <li>
+              <strong>Forecasting Future Costs:</strong>  
+              <br>Input your expected monthly growth rate and run the 12‑month forecast to see how continued demand spikes could affect future budgets. This forecast assists in proactive planning and resource allocation.
+            </li>
+            <li>
+              <strong>Monte Carlo Simulation:</strong>  
+              <br>Execute a Monte Carlo simulation that models thousands of iterations to capture the uncertainty in your cost estimates. The resulting probability distribution of outcomes allows you to quantify the risk of future overages and adjust your contingency funds accordingly.
+            </li>
+            <li>
+              <strong>Sensitivity Analysis:</strong>  
+              <br>Perform sensitivity analysis on key variables such as discount rates or auto‑scaling efficiency. This step helps you identify the most impactful factors, guiding strategic negotiations with your cloud provider and internal process improvements.
+            </li>
+          </ol>
+          <p>
+            <strong>Outcome:</strong> By using FinOps++ in this scenario, you gain a detailed understanding of the cost drivers behind the sudden spike in expenses. With this insight, you decide to renegotiate volume discounts with your provider, adjust your auto‑scaling policies to be more responsive, and revise your budget forecasts. This proactive approach not only prevents future cost overages but also strengthens your overall financial management strategy.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Variable Explanations Section -->
     <div class="card section-card">
-      <div class="card-header">Variable Explanations</div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Overall Fixed Cost ($):</strong> The baseline expenses that do not change with usage (e.g., server management fees).</li>
-          <li><strong>Base Revenue per Unit ($):</strong> The revenue earned from each unit sold or service rendered at standard rates.</li>
-          <li><strong>Revenue Units:</strong> The total number of transactions or service units consumed.</li>
-          <li><strong>Elasticity Threshold (Revenue Units):</strong> The usage point beyond which revenue per unit decreases.</li>
-          <li><strong>Elasticity Factor:</strong> The decrement in revenue per unit for each additional unit beyond the threshold.</li>
-          <li><strong>Fixed Cost (per category):</strong> Constant costs specific to a service area (compute, storage, network, licensing).</li>
-          <li><strong>Variable Cost per Unit:</strong> Costs that scale with usage (e.g., per compute hour, per GB stored).</li>
-          <li><strong>Tier 1 &amp; Tier 2 Thresholds:</strong> Usage limits that trigger discount pricing.</li>
-          <li><strong>Tier 1 &amp; Tier 2 Discount Rates (%):</strong> Percentage discounts applied when usage exceeds designated thresholds.</li>
-          <li><strong>Monthly Growth Rate (%):</strong> Expected percentage increase in usage and costs month over month.</li>
-          <li><strong>Simulation Iterations:</strong> Number of runs in a Monte Carlo simulation to model variability in cost outcomes.</li>
-          <li><strong>Cost &amp; Revenue Variability (%):</strong> The anticipated fluctuation in costs and revenues.</li>
-          <li><strong>Live Cloud Pricing:</strong> Real-time pricing data fetched directly from AWS, Azure, and GCP.</li>
-        </ul>
+      <div class="card-header" data-toggle="collapse" data-target="#variableSection" aria-expanded="true" aria-controls="variableSection">
+        Variable Explanations
+      </div>
+      <div id="variableSection" class="collapse show">
+        <div class="card-body">
+          <ul>
+            <li><strong>Overall Fixed Cost ($):</strong> Baseline expenses that remain constant (e.g., management fees).</li>
+            <li><strong>Base Revenue per Unit ($):</strong> Revenue earned per transaction or service unit at standard rates.</li>
+            <li><strong>Revenue Units:</strong> The total number of transactions or service units consumed.</li>
+            <li><strong>Elasticity Threshold (Revenue Units):</strong> The usage level at which revenue per unit begins to decline.</li>
+            <li><strong>Elasticity Factor:</strong> The decrease in revenue per unit for each unit beyond the threshold.</li>
+            <li><strong>Fixed Cost (per category):</strong> Constant costs associated with a service area (compute, storage, network, licensing).</li>
+            <li><strong>Variable Cost per Unit:</strong> Costs that increase with usage (e.g., per compute hour or per GB stored).</li>
+            <li><strong>Tier 1 &amp; Tier 2 Thresholds:</strong> Usage limits that trigger discounted pricing rates.</li>
+            <li><strong>Tier 1 &amp; Tier 2 Discount Rates (%):</strong> Percentage discounts applied when usage exceeds the defined thresholds.</li>
+            <li><strong>Monthly Growth Rate (%):</strong> Expected monthly increase in usage and costs.</li>
+            <li><strong>Simulation Iterations:</strong> The number of runs in a Monte Carlo simulation to model uncertainty.</li>
+            <li><strong>Cost &amp; Revenue Variability (%):</strong> Anticipated fluctuations in costs and revenues due to market changes.</li>
+            <li><strong>Live Cloud Pricing:</strong> Real-time pricing data (or fallback static values) from major cloud providers.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Overall & Revenue Inputs Section -->
     <div class="card section-card">
-      <div class="card-header">Overall &amp; Revenue Inputs</div>
-      <div class="card-body">
-        <p class="instruction">
-          Enter your overall fixed costs and revenue assumptions that form the basis of your financial model.
-        </p>
-        <div class="form-group">
-          <label for="overallFixedCost">Overall Fixed Cost ($):</label>
-          <input type="number" id="overallFixedCost" class="form-control" value="1000" step="any">
-        </div>
-        <h5>Revenue Inputs</h5>
-        <p class="instruction">
-          Provide your base revenue per unit and the total number of revenue units. An elasticity factor will adjust your revenue per unit if consumption exceeds the threshold.
-        </p>
-        <div class="form-group">
-          <label for="revenuePerUnit">Base Revenue per Unit ($):</label>
-          <input type="number" id="revenuePerUnit" class="form-control" value="25" step="any">
-        </div>
-        <div class="form-group">
-          <label for="revenueUnits">Revenue Units:</label>
-          <input type="number" id="revenueUnits" class="form-control" value="1000" step="any">
-        </div>
-        <div class="form-group">
-          <label for="elasticityThresholdRev">Elasticity Threshold (Revenue Units):</label>
-          <input type="number" id="elasticityThresholdRev" class="form-control" value="800" step="any">
-        </div>
-        <div class="form-group">
-          <label for="elasticityFactorRev">Elasticity Factor (Revenue $ drop per unit beyond threshold):</label>
-          <input type="number" id="elasticityFactorRev" class="form-control" value="0.03" step="any">
+      <div class="card-header" data-toggle="collapse" data-target="#inputsSection" aria-expanded="true" aria-controls="inputsSection">
+        Overall &amp; Revenue Inputs
+      </div>
+      <div id="inputsSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Enter your overall fixed costs and revenue assumptions to form the basis of your financial model.
+          </p>
+          <div class="form-group">
+            <label for="overallFixedCost">Overall Fixed Cost ($):</label>
+            <input type="number" id="overallFixedCost" class="form-control" value="1000" step="any">
+          </div>
+          <h5>Revenue Inputs</h5>
+          <p class="instruction">
+            Provide your base revenue per unit and total revenue units. An elasticity factor will adjust revenue if usage exceeds the threshold.
+          </p>
+          <div class="form-group">
+            <label for="revenuePerUnit">Base Revenue per Unit ($):</label>
+            <input type="number" id="revenuePerUnit" class="form-control" value="25" step="any">
+          </div>
+          <div class="form-group">
+            <label for="revenueUnits">Revenue Units:</label>
+            <input type="number" id="revenueUnits" class="form-control" value="1000" step="any">
+          </div>
+          <div class="form-group">
+            <label for="elasticityThresholdRev">Elasticity Threshold (Revenue Units):</label>
+            <input type="number" id="elasticityThresholdRev" class="form-control" value="800" step="any">
+          </div>
+          <div class="form-group">
+            <label for="elasticityFactorRev">Elasticity Factor (Revenue $ drop per unit beyond threshold):</label>
+            <input type="number" id="elasticityFactorRev" class="form-control" value="0.03" step="any">
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Cost Categories Section -->
     <div class="card section-card">
-      <div class="card-header">Cost Categories</div>
-      <div class="card-body">
-        <p class="instruction">
-          Enter the costs for each service category using a tiered discount model.
-        </p>
-        <!-- Compute Category -->
-        <div class="card mb-3">
-          <div class="card-header">Compute</div>
-          <div class="card-body">
-            <p class="instruction">Enter your compute costs (e.g., server hours). Tiered discounting applies based on usage thresholds.</p>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="computeFixed">Fixed Cost ($):</label>
-                <input type="number" id="computeFixed" class="form-control" value="500" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="computeVariable">Variable Cost per Unit ($):</label>
-                <input type="number" id="computeVariable" class="form-control" value="0.15" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="computeUnits">Units (e.g., compute hours):</label>
-                <input type="number" id="computeUnits" class="form-control" value="6000" step="any">
+      <div class="card-header" data-toggle="collapse" data-target="#costCategoriesSection" aria-expanded="true" aria-controls="costCategoriesSection">
+        Cost Categories
+      </div>
+      <div id="costCategoriesSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Enter the costs for each service category using a tiered discount model.
+          </p>
+          <!-- Compute Category -->
+          <div class="card mb-3">
+            <div class="card-header" data-toggle="collapse" data-target="#computeSection" aria-expanded="true" aria-controls="computeSection">
+              Compute
+            </div>
+            <div id="computeSection" class="collapse show">
+              <div class="card-body">
+                <p class="instruction">Enter your compute costs (e.g., server hours). Tiered discounting applies based on usage thresholds.</p>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="computeFixed">Fixed Cost ($):</label>
+                    <input type="number" id="computeFixed" class="form-control" value="500" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="computeVariable">Variable Cost per Unit ($):</label>
+                    <input type="number" id="computeVariable" class="form-control" value="0.15" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="computeUnits">Units (e.g., compute hours):</label>
+                    <input type="number" id="computeUnits" class="form-control" value="6000" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="computeTier1Threshold">Tier 1 Threshold:</label>
+                    <input type="number" id="computeTier1Threshold" class="form-control" value="4000" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="computeTier1Rate">Tier 1 Discount Rate (%):</label>
+                    <input type="number" id="computeTier1Rate" class="form-control" value="5" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="computeTier2Threshold">Tier 2 Threshold:</label>
+                    <input type="number" id="computeTier2Threshold" class="form-control" value="8000" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="computeTier2Rate">Tier 2 Discount Rate (%):</label>
+                    <input type="number" id="computeTier2Rate" class="form-control" value="10" step="any">
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="computeTier1Threshold">Tier 1 Threshold:</label>
-                <input type="number" id="computeTier1Threshold" class="form-control" value="4000" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="computeTier1Rate">Tier 1 Discount Rate (%):</label>
-                <input type="number" id="computeTier1Rate" class="form-control" value="5" step="any">
+          </div>
+          <!-- Storage Category -->
+          <div class="card mb-3">
+            <div class="card-header" data-toggle="collapse" data-target="#storageSection" aria-expanded="true" aria-controls="storageSection">
+              Storage
+            </div>
+            <div id="storageSection" class="collapse show">
+              <div class="card-body">
+                <p class="instruction">Enter your storage costs (e.g., GB used). Tiered discounting applies here as well.</p>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="storageFixed">Fixed Cost ($):</label>
+                    <input type="number" id="storageFixed" class="form-control" value="300" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="storageVariable">Variable Cost per Unit ($):</label>
+                    <input type="number" id="storageVariable" class="form-control" value="0.05" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="storageUnits">Units (e.g., GB):</label>
+                    <input type="number" id="storageUnits" class="form-control" value="20000" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="storageTier1Threshold">Tier 1 Threshold:</label>
+                    <input type="number" id="storageTier1Threshold" class="form-control" value="15000" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="storageTier1Rate">Tier 1 Discount Rate (%):</label>
+                    <input type="number" id="storageTier1Rate" class="form-control" value="3" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="storageTier2Threshold">Tier 2 Threshold:</label>
+                    <input type="number" id="storageTier2Threshold" class="form-control" value="30000" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="storageTier2Rate">Tier 2 Discount Rate (%):</label>
+                    <input type="number" id="storageTier2Rate" class="form-control" value="7" step="any">
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="computeTier2Threshold">Tier 2 Threshold:</label>
-                <input type="number" id="computeTier2Threshold" class="form-control" value="8000" step="any">
+          </div>
+          <!-- Network Category -->
+          <div class="card mb-3">
+            <div class="card-header" data-toggle="collapse" data-target="#networkSection" aria-expanded="true" aria-controls="networkSection">
+              Network
+            </div>
+            <div id="networkSection" class="collapse show">
+              <div class="card-body">
+                <p class="instruction">Enter your network costs (e.g., data transferred in GB). Discounts apply based on usage thresholds.</p>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="networkFixed">Fixed Cost ($):</label>
+                    <input type="number" id="networkFixed" class="form-control" value="200" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="networkVariable">Variable Cost per Unit ($):</label>
+                    <input type="number" id="networkVariable" class="form-control" value="0.10" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="networkUnits">Units (e.g., GB transferred):</label>
+                    <input type="number" id="networkUnits" class="form-control" value="10000" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="networkTier1Threshold">Tier 1 Threshold:</label>
+                    <input type="number" id="networkTier1Threshold" class="form-control" value="8000" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="networkTier1Rate">Tier 1 Discount Rate (%):</label>
+                    <input type="number" id="networkTier1Rate" class="form-control" value="4" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="networkTier2Threshold">Tier 2 Threshold:</label>
+                    <input type="number" id="networkTier2Threshold" class="form-control" value="15000" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="networkTier2Rate">Tier 2 Discount Rate (%):</label>
+                    <input type="number" id="networkTier2Rate" class="form-control" value="8" step="any">
+                  </div>
+                </div>
               </div>
-              <div class="form-group col-md-6">
-                <label for="computeTier2Rate">Tier 2 Discount Rate (%):</label>
-                <input type="number" id="computeTier2Rate" class="form-control" value="10" step="any">
+            </div>
+          </div>
+          <!-- License Category -->
+          <div class="card mb-3">
+            <div class="card-header" data-toggle="collapse" data-target="#licenseSection" aria-expanded="true" aria-controls="licenseSection">
+              License
+            </div>
+            <div id="licenseSection" class="collapse show">
+              <div class="card-body">
+                <p class="instruction">Enter your licensing costs (e.g., software seats). Volume discounts may apply.</p>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="licenseFixed">Fixed Cost ($):</label>
+                    <input type="number" id="licenseFixed" class="form-control" value="400" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="licenseVariable">Variable Cost per Unit ($):</label>
+                    <input type="number" id="licenseVariable" class="form-control" value="1.00" step="any">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="licenseUnits">Units (e.g., seats):</label>
+                    <input type="number" id="licenseUnits" class="form-control" value="300" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="licenseTier1Threshold">Tier 1 Threshold:</label>
+                    <input type="number" id="licenseTier1Threshold" class="form-control" value="250" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="licenseTier1Rate">Tier 1 Discount Rate (%):</label>
+                    <input type="number" id="licenseTier1Rate" class="form-control" value="10" step="any">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="licenseTier2Threshold">Tier 2 Threshold:</label>
+                    <input type="number" id="licenseTier2Threshold" class="form-control" value="500" step="any">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="licenseTier2Rate">Tier 2 Discount Rate (%):</label>
+                    <input type="number" id="licenseTier2Rate" class="form-control" value="15" step="any">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Storage Category -->
-        <div class="card mb-3">
-          <div class="card-header">Storage</div>
-          <div class="card-body">
-            <p class="instruction">Enter your storage costs (e.g., GB used). Tiered discounting applies here as well.</p>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="storageFixed">Fixed Cost ($):</label>
-                <input type="number" id="storageFixed" class="form-control" value="300" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="storageVariable">Variable Cost per Unit ($):</label>
-                <input type="number" id="storageVariable" class="form-control" value="0.05" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="storageUnits">Units (e.g., GB):</label>
-                <input type="number" id="storageUnits" class="form-control" value="20000" step="any">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="storageTier1Threshold">Tier 1 Threshold:</label>
-                <input type="number" id="storageTier1Threshold" class="form-control" value="15000" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="storageTier1Rate">Tier 1 Discount Rate (%):</label>
-                <input type="number" id="storageTier1Rate" class="form-control" value="3" step="any">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="storageTier2Threshold">Tier 2 Threshold:</label>
-                <input type="number" id="storageTier2Threshold" class="form-control" value="30000" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="storageTier2Rate">Tier 2 Discount Rate (%):</label>
-                <input type="number" id="storageTier2Rate" class="form-control" value="7" step="any">
-              </div>
-            </div>
+      </div>
+    </div>
+
+    <!-- Advanced Settings Section -->
+    <div class="card section-card">
+      <div class="card-header" data-toggle="collapse" data-target="#advancedSection" aria-expanded="true" aria-controls="advancedSection">
+        Advanced Settings
+      </div>
+      <div id="advancedSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Use these advanced settings to further optimize your cost model.
+          </p>
+          <div class="form-group">
+            <label for="autoScalingFactor">Auto-Scaling Factor (%) [reduces compute cost]:</label>
+            <input type="number" id="autoScalingFactor" class="form-control" value="0" step="any">
           </div>
-        </div>
-        <!-- Network Category -->
-        <div class="card mb-3">
-          <div class="card-header">Network</div>
-          <div class="card-body">
-            <p class="instruction">Enter your network costs (e.g., data transferred in GB). Discounts apply based on usage thresholds.</p>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="networkFixed">Fixed Cost ($):</label>
-                <input type="number" id="networkFixed" class="form-control" value="200" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="networkVariable">Variable Cost per Unit ($):</label>
-                <input type="number" id="networkVariable" class="form-control" value="0.10" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="networkUnits">Units (e.g., GB transferred):</label>
-                <input type="number" id="networkUnits" class="form-control" value="10000" step="any">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="networkTier1Threshold">Tier 1 Threshold:</label>
-                <input type="number" id="networkTier1Threshold" class="form-control" value="8000" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="networkTier1Rate">Tier 1 Discount Rate (%):</label>
-                <input type="number" id="networkTier1Rate" class="form-control" value="4" step="any">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="networkTier2Threshold">Tier 2 Threshold:</label>
-                <input type="number" id="networkTier2Threshold" class="form-control" value="15000" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="networkTier2Rate">Tier 2 Discount Rate (%):</label>
-                <input type="number" id="networkTier2Rate" class="form-control" value="8" step="any">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- License Category -->
-        <div class="card mb-3">
-          <div class="card-header">License</div>
-          <div class="card-body">
-            <p class="instruction">Enter your licensing costs (e.g., software seats). Discounts may apply when purchasing in volume.</p>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="licenseFixed">Fixed Cost ($):</label>
-                <input type="number" id="licenseFixed" class="form-control" value="400" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="licenseVariable">Variable Cost per Unit ($):</label>
-                <input type="number" id="licenseVariable" class="form-control" value="1.00" step="any">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="licenseUnits">Units (e.g., seats):</label>
-                <input type="number" id="licenseUnits" class="form-control" value="300" step="any">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="licenseTier1Threshold">Tier 1 Threshold:</label>
-                <input type="number" id="licenseTier1Threshold" class="form-control" value="250" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="licenseTier1Rate">Tier 1 Discount Rate (%):</label>
-                <input type="number" id="licenseTier1Rate" class="form-control" value="10" step="any">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="licenseTier2Threshold">Tier 2 Threshold:</label>
-                <input type="number" id="licenseTier2Threshold" class="form-control" value="500" step="any">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="licenseTier2Rate">Tier 2 Discount Rate (%):</label>
-                <input type="number" id="licenseTier2Rate" class="form-control" value="15" step="any">
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="dynamicPricingAdjustment">Dynamic Pricing Adjustment (%) [boosts revenue per unit]:</label>
+            <input type="number" id="dynamicPricingAdjustment" class="form-control" value="0" step="any">
           </div>
         </div>
       </div>
@@ -397,117 +438,145 @@
 
     <!-- Cloud Pricing Integration Section -->
     <div class="card section-card">
-      <div class="card-header">Cloud Pricing Integration (Live)</div>
-      <div class="card-body">
-        <p class="instruction">
-          Click the button below to fetch the latest live pricing data for compute, storage, and network services from AWS, Azure, and Google Cloud.
-        </p>
-        <button id="fetchCloudPrices" class="btn btn-primary mb-3">Fetch Latest Cloud Prices</button>
-        <div id="cloudPricingResults" class="result" style="display:none;"></div>
+      <div class="card-header" data-toggle="collapse" data-target="#cloudPricingSection" aria-expanded="true" aria-controls="cloudPricingSection">
+        Cloud Pricing Integration (Live)
+      </div>
+      <div id="cloudPricingSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Click the button below to fetch the latest pricing data. Due to timeout issues with the official endpoints, we are using fallback static pricing values.
+          </p>
+          <button id="fetchCloudPrices" class="btn btn-primary mb-3">Fetch Latest Cloud Prices</button>
+          <div id="cloudPricingResults" class="result" style="display:none;"></div>
+        </div>
       </div>
     </div>
 
     <!-- Forecasting Section -->
     <div class="card section-card">
-      <div class="card-header">Forecasting (12‑Month Projection)</div>
-      <div class="card-body">
-        <p class="instruction">
-          Enter your expected monthly growth rate to project revenue, costs, and profit over the next 12 months.
-        </p>
-        <div class="form-group">
-          <label for="monthlyGrowth">Monthly Growth Rate (%):</label>
-          <input type="number" id="monthlyGrowth" class="form-control" value="5" step="any">
+      <div class="card-header" data-toggle="collapse" data-target="#forecastSection" aria-expanded="true" aria-controls="forecastSection">
+        Forecasting (12‑Month Projection)
+      </div>
+      <div id="forecastSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Enter your expected monthly growth rate to project revenue, costs, and profit over the next 12 months.
+          </p>
+          <div class="form-group">
+            <label for="monthlyGrowth">Monthly Growth Rate (%):</label>
+            <input type="number" id="monthlyGrowth" class="form-control" value="5" step="any">
+          </div>
+          <button id="runForecast" class="btn btn-success mb-3">Run Forecast</button>
+          <canvas id="forecastChart" width="600" height="300" style="display:none;"></canvas>
         </div>
-        <button id="runForecast" class="btn btn-success mb-3">Run Forecast</button>
-        <canvas id="forecastChart" width="600" height="300" style="display:none;"></canvas>
       </div>
     </div>
 
     <!-- Deterministic Calculation Section -->
     <div class="card section-card">
-      <div class="card-header">Deterministic Calculation &amp; Results</div>
-      <div class="card-body">
-        <p class="instruction">
-          Click the button below to calculate deterministic metrics (total revenue, cost, profit, ROI) along with a detailed cost breakdown.
-        </p>
-        <button id="calculateBtn" class="btn btn-warning mb-3">Calculate Deterministic Metrics</button>
-        <div id="deterministicResults" class="result" style="display:none;"></div>
-        <canvas id="pieChart" width="400" height="200" style="display:none;"></canvas>
+      <div class="card-header" data-toggle="collapse" data-target="#deterministicSection" aria-expanded="true" aria-controls="deterministicSection">
+        Deterministic Calculation &amp; Results
+      </div>
+      <div id="deterministicSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Click the button below to calculate key financial metrics and see a detailed cost breakdown.
+          </p>
+          <button id="calculateBtn" class="btn btn-warning mb-3">Calculate Deterministic Metrics</button>
+          <div id="deterministicResults" class="result" style="display:none;"></div>
+          <canvas id="pieChart" width="400" height="200" style="display:none;"></canvas>
+        </div>
       </div>
     </div>
 
     <!-- Monte Carlo Simulation Section -->
     <div class="card section-card">
-      <div class="card-header">Monte Carlo Simulation</div>
-      <div class="card-body">
-        <p class="instruction">
-          Use this section to simulate uncertainty in your cost and revenue estimates. Adjust the variability percentages and number of iterations to model risk.
-        </p>
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label for="simIterations">Simulation Iterations:</label>
-            <input type="number" id="simIterations" class="form-control" value="1000" step="1">
+      <div class="card-header" data-toggle="collapse" data-target="#simulationSection" aria-expanded="true" aria-controls="simulationSection">
+        Monte Carlo Simulation
+      </div>
+      <div id="simulationSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Use this section to simulate uncertainty in your cost and revenue estimates. Adjust the variability percentages and number of iterations to model risk.
+          </p>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="simIterations">Simulation Iterations:</label>
+              <input type="number" id="simIterations" class="form-control" value="1000" step="1">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="costVariability">Cost Variability (%):</label>
+              <input type="number" id="costVariability" class="form-control" value="10" step="any">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="revenueVariability">Revenue Variability (%):</label>
+              <input type="number" id="revenueVariability" class="form-control" value="10" step="any">
+            </div>
           </div>
-          <div class="form-group col-md-4">
-            <label for="costVariability">Cost Variability (%):</label>
-            <input type="number" id="costVariability" class="form-control" value="10" step="any">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="revenueVariability">Revenue Variability (%):</label>
-            <input type="number" id="revenueVariability" class="form-control" value="10" step="any">
-          </div>
+          <button id="runSimulation" class="btn btn-danger mb-3">Run Simulation</button>
+          <div id="simulationResults" class="result" style="display:none;"></div>
+          <canvas id="histogramChart" width="600" height="300" style="display:none;"></canvas>
         </div>
-        <button id="runSimulation" class="btn btn-danger mb-3">Run Simulation</button>
-        <div id="simulationResults" class="result" style="display:none;"></div>
-        <canvas id="histogramChart" width="600" height="300" style="display:none;"></canvas>
       </div>
     </div>
 
     <!-- Sensitivity Analysis Section -->
     <div class="card section-card">
-      <div class="card-header">Sensitivity Analysis</div>
-      <div class="card-body">
-        <p class="instruction">
-          Examine how varying key parameters (such as the Compute Tier 1 discount rate) affects overall profitability. This analysis identifies the most sensitive cost drivers.
-        </p>
-        <button id="runSensitivity" class="btn btn-info mb-3">Run Sensitivity Analysis</button>
-        <div id="sensitivityResults" class="result" style="display:none;"></div>
+      <div class="card-header" data-toggle="collapse" data-target="#sensitivitySection" aria-expanded="true" aria-controls="sensitivitySection">
+        Sensitivity Analysis
+      </div>
+      <div id="sensitivitySection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Examine how varying key parameters (such as the Compute Tier 1 discount rate) affects overall profitability.
+          </p>
+          <button id="runSensitivity" class="btn btn-info mb-3">Run Sensitivity Analysis</button>
+          <div id="sensitivityResults" class="result" style="display:none;"></div>
+        </div>
       </div>
     </div>
 
     <!-- Export Report Section -->
     <div class="card section-card">
-      <div class="card-header">Export Report</div>
-      <div class="card-body">
-        <p class="instruction">
-          Generate a professional PDF report summarizing your analysis—including key metrics and charts—for sharing with your team.
-        </p>
-        <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
+      <div class="card-header" data-toggle="collapse" data-target="#exportSection" aria-expanded="true" aria-controls="exportSection">
+        Export Report
+      </div>
+      <div id="exportSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Generate a professional PDF report summarizing your analysis—including key metrics and charts—for sharing with your team.
+          </p>
+          <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
+        </div>
       </div>
     </div>
 
-    <!-- Official Pricing Links Section -->
+    <!-- Official Pricing Resources Section -->
     <div class="card section-card">
-      <div class="card-header">Official Pricing Resources</div>
-      <div class="card-body">
-        <p>
-          For the most accurate and up-to-date pricing information, refer directly to the official pricing pages of the major cloud providers:
-        </p>
-        <ul>
-          <li><a href="https://aws.amazon.com/pricing/" target="_blank">AWS Pricing</a></li>
-          <li><a href="https://azure.microsoft.com/en-us/pricing/" target="_blank">Azure Pricing</a></li>
-          <li><a href="https://cloud.google.com/pricing" target="_blank">Google Cloud Pricing</a></li>
-        </ul>
+      <div class="card-header" data-toggle="collapse" data-target="#pricingResourcesSection" aria-expanded="true" aria-controls="pricingResourcesSection">
+        Official Pricing Resources
+      </div>
+      <div id="pricingResourcesSection" class="collapse show">
+        <div class="card-body">
+          <p>
+            For the most accurate and up-to-date pricing information, refer directly to the official pricing pages of the major cloud providers:
+          </p>
+          <ul>
+            <li><a href="https://aws.amazon.com/pricing/" target="_blank">AWS Pricing</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/pricing/" target="_blank">Azure Pricing</a></li>
+            <li><a href="https://cloud.google.com/pricing" target="_blank">Google Cloud Pricing</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Footer with Contact Info -->
+    <!-- Footer -->
     <footer>
       <p>For further inquiries, please reach out to <a href="mailto:info@tullyedmvibe.com">info@tullyedmvibe.com</a></p>
     </footer>
   </div>
 
-  <!-- Dependencies: jQuery, Bootstrap JS, Chart.js, jsPDF -->
+  <!-- Dependencies: jQuery, Bootstrap JS (for collapse functionality), Chart.js, jsPDF -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -524,84 +593,28 @@
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
 
-    // ---------- Cloud Pricing Fetch Functions ----------
-    // AWS Compute Pricing (example using t2.micro instance)
+    // ---------- Cloud Pricing Fetch Functions (Fallback Static Values) ----------
+    // Due to timeout exceptions with official endpoints, we use fallback static pricing.
     async function fetchAWSComputePrice() {
-      try {
-        const response = await fetch('https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json');
-        const data = await response.json();
-        const productKey = Object.keys(data.products).find(key => {
-          return data.products[key].attributes && data.products[key].attributes.instanceType === 't2.micro';
-        });
-        let price = "N/A";
-        if (productKey) {
-          const onDemand = data.terms.OnDemand[productKey];
-          if (onDemand) {
-            const termKey = Object.keys(onDemand)[0];
-            price = onDemand[termKey].priceDimensions[Object.keys(onDemand[termKey].priceDimensions)[0]].pricePerUnit.USD;
-          }
-        }
-        return price;
-      } catch(error) {
-        console.error("AWS Compute fetch error:", error);
-        return "Error";
-      }
+      return "0.13"; // Fallback price for compute (e.g., t2.micro)
     }
-    // AWS Storage Pricing (example using S3 Standard)
     async function fetchAWSStoragePrice() {
-      try {
-        const response = await fetch('https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/index.json');
-        const data = await response.json();
-        const productKey = Object.keys(data.products).find(key => {
-          return data.products[key].attributes && data.products[key].attributes.storageClass === 'Standard';
-        });
-        let price = "N/A";
-        if (productKey) {
-          const onDemand = data.terms.OnDemand[productKey];
-          if (onDemand) {
-            const termKey = Object.keys(onDemand)[0];
-            price = onDemand[termKey].priceDimensions[Object.keys(onDemand[termKey].priceDimensions)[0]].pricePerUnit.USD;
-          }
-        }
-        return price;
-      } catch(error) {
-        console.error("AWS Storage fetch error:", error);
-        return "Error";
-      }
+      return "0.05"; // Fallback price for S3 Standard storage per GB
     }
-    // AWS Network Pricing (example using Data Transfer Out)
     async function fetchAWSNetworkPrice() {
-      try {
-        const response = await fetch('https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json');
-        const data = await response.json();
-        const productKey = Object.keys(data.products).find(key => {
-          return data.products[key].attributes && data.products[key].attributes.usageType && data.products[key].attributes.usageType.includes('DataTransfer-Out-Bytes');
-        });
-        let price = "N/A";
-        if (productKey) {
-          const onDemand = data.terms.OnDemand[productKey];
-          if (onDemand) {
-            const termKey = Object.keys(onDemand)[0];
-            price = onDemand[termKey].priceDimensions[Object.keys(onDemand[termKey].priceDimensions)[0]].pricePerUnit.USD;
-          }
-        }
-        return price;
-      } catch(error) {
-        console.error("AWS Network fetch error:", error);
-        return "Error";
-      }
+      return "0.09"; // Fallback price for Data Transfer Out per GB
     }
     document.getElementById('fetchCloudPrices').addEventListener('click', async () => {
       const resultsDiv = document.getElementById('cloudPricingResults');
       resultsDiv.style.display = 'block';
-      resultsDiv.innerHTML = '<p>Fetching latest cloud pricing…</p>';
+      resultsDiv.innerHTML = '<p>Fetching fallback cloud pricing…</p>';
       try {
         const [awsCompute, awsStorage, awsNetwork] = await Promise.all([
           fetchAWSComputePrice(),
           fetchAWSStoragePrice(),
           fetchAWSNetworkPrice()
         ]);
-        let html = '<h5>Latest Cloud Prices:</h5><table class="table table-bordered"><thead><tr><th>Category</th><th>AWS ($/unit)</th></tr></thead><tbody>';
+        let html = '<h5>Fallback AWS Prices:</h5><table class="table table-bordered"><thead><tr><th>Category</th><th>Price ($/unit)</th></tr></thead><tbody>';
         html += `<tr><td>Compute (t2.micro)</td><td>${awsCompute}</td></tr>`;
         html += `<tr><td>Storage (S3 Standard)</td><td>${awsStorage}</td></tr>`;
         html += `<tr><td>Network (Data Transfer Out)</td><td>${awsNetwork}</td></tr>`;
@@ -618,28 +631,37 @@
       if (units <= tier1Threshold) {
         cost = units * baseCost;
       } else if (units <= tier2Threshold) {
-        cost = tier1Threshold * baseCost + (units - tier1Threshold) * baseCost * (1 - tier1Rate/100);
+        cost = tier1Threshold * baseCost + (units - tier1Threshold) * baseCost * (1 - tier1Rate / 100);
       } else {
         cost = tier1Threshold * baseCost +
-               (tier2Threshold - tier1Threshold) * baseCost * (1 - tier1Rate/100) +
-               (units - tier2Threshold) * baseCost * (1 - tier2Rate/100);
+               (tier2Threshold - tier1Threshold) * baseCost * (1 - tier1Rate / 100) +
+               (units - tier2Threshold) * baseCost * (1 - tier2Rate / 100);
       }
       return cost;
     }
 
-    // ---------- Deterministic Calculation ----------
+    // ---------- Deterministic Calculation (with Advanced Settings) ----------
     document.getElementById('calculateBtn').addEventListener('click', () => {
+      // Base inputs
       const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
       const revenuePerUnit = parseFloat(document.getElementById('revenuePerUnit').value);
       const revenueUnits = parseFloat(document.getElementById('revenueUnits').value);
       const elasticityThresholdRev = parseFloat(document.getElementById('elasticityThresholdRev').value);
       const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
+      
+      // Advanced inputs
+      const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
+      const autoScalingFactor = parseFloat(document.getElementById('autoScalingFactor').value);
+      
+      // Adjust effective revenue per unit with elasticity and dynamic pricing
       let effectiveRevenuePerUnit = revenuePerUnit;
       if (revenueUnits > elasticityThresholdRev) {
         effectiveRevenuePerUnit = Math.max(revenuePerUnit - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
       }
+      effectiveRevenuePerUnit = effectiveRevenuePerUnit * (1 + dynamicPricingAdjustment / 100);
       const totalRevenue = revenueUnits * effectiveRevenuePerUnit;
 
+      // Compute costs
       const computeFixed = parseFloat(document.getElementById('computeFixed').value);
       const computeVariable = parseFloat(document.getElementById('computeVariable').value);
       const computeUnits = parseFloat(document.getElementById('computeUnits').value);
@@ -647,8 +669,11 @@
       const computeTier1Rate = parseFloat(document.getElementById('computeTier1Rate').value);
       const computeTier2Threshold = parseFloat(document.getElementById('computeTier2Threshold').value);
       const computeTier2Rate = parseFloat(document.getElementById('computeTier2Rate').value);
-      const computeCost = computeFixed + computeCategoryCost(computeUnits, computeVariable, computeTier1Threshold, computeTier1Rate, computeTier2Threshold, computeTier2Rate);
+      let computeCost = computeFixed + computeCategoryCost(computeUnits, computeVariable, computeTier1Threshold, computeTier1Rate, computeTier2Threshold, computeTier2Rate);
+      // Apply auto-scaling adjustment
+      computeCost = computeCost * (1 - autoScalingFactor / 100);
 
+      // Storage costs
       const storageFixed = parseFloat(document.getElementById('storageFixed').value);
       const storageVariable = parseFloat(document.getElementById('storageVariable').value);
       const storageUnits = parseFloat(document.getElementById('storageUnits').value);
@@ -658,6 +683,7 @@
       const storageTier2Rate = parseFloat(document.getElementById('storageTier2Rate').value);
       const storageCost = storageFixed + computeCategoryCost(storageUnits, storageVariable, storageTier1Threshold, storageTier1Rate, storageTier2Threshold, storageTier2Rate);
 
+      // Network costs
       const networkFixed = parseFloat(document.getElementById('networkFixed').value);
       const networkVariable = parseFloat(document.getElementById('networkVariable').value);
       const networkUnits = parseFloat(document.getElementById('networkUnits').value);
@@ -667,6 +693,7 @@
       const networkTier2Rate = parseFloat(document.getElementById('networkTier2Rate').value);
       const networkCost = networkFixed + computeCategoryCost(networkUnits, networkVariable, networkTier1Threshold, networkTier1Rate, networkTier2Threshold, networkTier2Rate);
 
+      // License costs
       const licenseFixed = parseFloat(document.getElementById('licenseFixed').value);
       const licenseVariable = parseFloat(document.getElementById('licenseVariable').value);
       const licenseUnits = parseFloat(document.getElementById('licenseUnits').value);
@@ -719,7 +746,10 @@
       const revenueUnits = parseFloat(document.getElementById('revenueUnits').value);
       const elasticityThresholdRev = parseFloat(document.getElementById('elasticityThresholdRev').value);
       const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
-
+      
+      // Advanced dynamic pricing adjustment
+      const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
+      
       function getBaselineCost(idPrefix) {
         const fixed = parseFloat(document.getElementById(idPrefix + 'Fixed').value);
         const variable = parseFloat(document.getElementById(idPrefix + 'Variable').value);
@@ -748,6 +778,7 @@
         if (currentRevenueUnits > elasticityThresholdRev) {
           effectiveRevenuePerUnit = Math.max(revenuePerUnit - elasticityFactorRev * (currentRevenueUnits - elasticityThresholdRev), 0);
         }
+        effectiveRevenuePerUnit = effectiveRevenuePerUnit * (1 + dynamicPricingAdjustment / 100);
         const totalRev = currentRevenueUnits * effectiveRevenuePerUnit;
         forecastMonths.push("Month " + m);
         forecastRevenue.push(totalRev);
@@ -789,6 +820,9 @@
       const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
       const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
 
+      // Advanced input for dynamic pricing adjustment
+      const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
+
       function getCategoryInputs(idPrefix) {
         return {
           fixed: parseFloat(document.getElementById(idPrefix + 'Fixed').value),
@@ -827,6 +861,8 @@
         if (revenueUnits > elasticityThresholdRev) {
           simEffectiveRevenue = Math.max(revenuePerUnit * revenueMultiplier - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
         }
+        // Apply dynamic pricing adjustment
+        simEffectiveRevenue = simEffectiveRevenue * (1 + dynamicPricingAdjustment / 100);
         const totalSimRevenue = revenueUnits * simEffectiveRevenue;
         simulationProfits.push(totalSimRevenue - totalSimCost);
       }
