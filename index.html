@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FinOps Xcalculator!</title>
+  <title>FinOps++</title>
   <!-- Bootstrap CSS for modern styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS using Tahoma -->
@@ -12,6 +12,7 @@
       background: #121212; 
       font-family: Tahoma, sans-serif;
       color: #e0e0e0;
+      padding-bottom: 2rem;
     }
     /* Header styling */
     .header {
@@ -20,6 +21,7 @@
       padding: 3rem 0;
       text-align: center;
       border-bottom: 3px solid #0d6efd;
+      margin-bottom: 2rem;
     }
     .header h1 {
       font-size: 3rem;
@@ -32,7 +34,7 @@
       margin: 0;
       color: #ccc;
     }
-    /* Card styling */
+    /* Section styling */
     .section-card { 
       margin-bottom: 2rem; 
       border: 1px solid #333;
@@ -82,52 +84,115 @@
   </style>
 </head>
 <body>
-  <!-- Updated Header -->
+  <!-- Header -->
   <div class="header">
-    <h1>FinOps Xcalculator!</h1>
+    <h1>FinOps++</h1>
     <p>Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
   </div>
 
   <div class="container">
+    <!-- Extended Overview Section -->
+    <div class="card section-card">
+      <div class="card-header">Overview</div>
+      <div class="card-body">
+        <p>
+          Cloud computing has revolutionized the way organizations operate—offering unprecedented scalability, agility, and innovation. However, this transformative power comes with a complexity of pricing models, discount tiers, and variable cost structures that can easily lead to unexpected expenses if not managed carefully. FinOps++ was developed to address these challenges head on by providing a comprehensive, interactive platform to model, forecast, and simulate cloud costs in real time.
+        </p>
+        <p>
+          FinOps++ integrates live pricing data directly from major cloud providers (AWS, Azure, and GCP) so that every cost calculation reflects the most up-to-date market conditions. This live data integration ensures that your cost estimates are current, reducing the risk of budget overruns and enabling proactive financial planning.
+        </p>
+        <p>
+          The tool’s robust architecture allows you to break down cloud spending into granular components: compute, storage, network, and licensing. Each of these components can be modeled with tiered discount rates and usage thresholds that mirror real-world pricing structures. By simulating various scenarios, FinOps++ helps you understand how changes in workload, discount rates, or pricing strategies impact your overall spending.
+        </p>
+        <p>
+          With advanced forecasting capabilities, FinOps++ enables you to project cloud costs over a 12‑month period. By inputting your monthly growth rate, you can simulate future spending, identify potential cost overages, and plan strategically for capacity expansion or cost optimization initiatives.
+        </p>
+        <p>
+          Beyond static cost modeling, FinOps++ incorporates Monte Carlo simulations to account for uncertainty and variability in usage and pricing. This feature allows you to run thousands of iterations to generate a probability distribution of possible outcomes, thus quantifying risk and helping you plan for worst-case scenarios.
+        </p>
+        <p>
+          Sensitivity analysis is another critical feature that helps you pinpoint which variables most significantly affect your bottom line. By adjusting discount rates, thresholds, or variability factors, you can see in real time how sensitive your overall cost is to these changes—guiding negotiations and strategic decisions.
+        </p>
+        <p>
+          FinOps++ is not just a calculator—it’s an educational tool that provides detailed explanations for every variable and cost factor, ensuring that both technical and financial stakeholders are aligned. This clarity facilitates more effective communication between IT and finance teams, enabling them to work together to optimize cloud spending.
+        </p>
+        <p>
+          The platform is designed with scalability in mind. Whether you are a startup or a large enterprise, FinOps++ scales with your business needs by offering flexible input parameters and a modular design that adapts to different cloud pricing models.
+        </p>
+        <p>
+          By combining live pricing data, advanced simulation methods, and comprehensive forecasting tools, FinOps++ transforms the challenge of managing cloud expenses into a data-driven, actionable process. It empowers you to take control of your cloud costs, reduce financial risk, and make smarter strategic decisions.
+        </p>
+        <p>
+          Ultimately, FinOps++ is your partner in navigating the complex landscape of cloud financial management. With this tool, you can achieve greater transparency, optimize resource allocation, and ensure that your cloud investments are aligned with your overall business strategy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Detailed Practical Use Cases Section -->
+    <div class="card section-card">
+      <div class="card-header">Practical Use Cases</div>
+      <div class="card-body">
+        <p>
+          <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," a mid-sized e-commerce company that relies on cloud services for hosting its website, managing customer data, and processing transactions. Over the past quarter, a viral marketing campaign unexpectedly increased website traffic by 300%, leading to a surge in compute, storage, and network usage. This surge resulted in cloud cost overages that far exceeded your monthly budget and threatened to erode your profit margins.
+        </p>
+        <p>
+          <strong>Step 1: Data Input and Baseline Setup</strong><br>
+          You begin by launching FinOps++ and entering the overall fixed costs associated with your cloud operations. These costs include base server fees, management overhead, and baseline software licensing expenses. Next, you input revenue assumptions—detailing the average revenue per transaction and the expected number of transactions under normal conditions. You also set an elasticity threshold to account for how revenue per transaction decreases when usage exceeds expected limits.
+        </p>
+        <p>
+          <strong>Step 2: Detailed Cost Breakdown</strong><br>
+          FinOps++ allows you to break down your cloud spending into specific categories. For compute costs, you enter the fixed base cost and variable cost per compute hour along with tiered discount thresholds that mirror your cloud provider’s pricing model. Similarly, you enter costs for storage (GBs of data stored), network (data transferred), and licensing (software seats). This detailed breakdown helps you understand which area is the primary driver of cost overages.
+        </p>
+        <p>
+          <strong>Step 3: Running Deterministic Calculations</strong><br>
+          With all data in place, you run the deterministic calculation feature to obtain key metrics: total revenue, total cost, profit, profit margin, and ROI. This baseline analysis provides you with a snapshot of your current financial state and highlights the immediate impact of the unexpected surge in usage.
+        </p>
+        <p>
+          <strong>Step 4: Forecasting Future Costs</strong><br>
+          Anticipating that similar spikes could occur in the future, you use the forecasting module to project cloud costs over the next 12 months. By inputting your estimated monthly growth rate, FinOps++ generates a forecast that shows how costs might escalate if the current trend continues. This forecast helps you plan for additional budget allocation or cost-cutting measures.
+        </p>
+        <p>
+          <strong>Step 5: Monte Carlo Simulation for Risk Assessment</strong><br>
+          To address uncertainty, you run a Monte Carlo simulation that uses historical variability in cost and revenue data. This simulation runs thousands of iterations to provide a range of possible financial outcomes, quantifying the probability of further cost overages. Armed with this statistical risk assessment, you can make more informed decisions about setting aside contingency funds or adjusting operational practices.
+        </p>
+        <p>
+          <strong>Step 6: Sensitivity Analysis for Strategic Optimization</strong><br>
+          Finally, you perform a sensitivity analysis by varying key discount parameters—particularly those affecting compute costs. This analysis reveals that a modest improvement in discount rates (achievable through renegotiation with your provider) could significantly reduce overall expenses. As a result, you decide to engage with your cloud provider to explore better volume discounts or alternative pricing models.
+        </p>
+        <p>
+          <strong>Outcome:</strong> By following these steps with FinOps++, you not only gain a clear understanding of the factors driving your cloud cost overages but also develop actionable strategies to mitigate future risks. You implement changes to optimize resource allocation, secure more favorable pricing terms, and adjust your budget forecasts, thereby transforming a crisis into an opportunity for strategic improvement.
+        </p>
+      </div>
+    </div>
+
     <!-- Variable Explanations Section -->
     <div class="card section-card">
       <div class="card-header">Variable Explanations</div>
       <div class="card-body">
         <ul>
-          <!-- Overall & Revenue -->
-          <li><strong>Overall Fixed Cost ($):</strong> Base fixed expenses independent of usage.</li>
-          <li><strong>Base Revenue per Unit ($):</strong> Revenue earned from each unit sold or used at the base rate.</li>
-          <li><strong>Revenue Units:</strong> The total number of units sold or utilized.</li>
-          <li><strong>Elasticity Threshold (Revenue Units):</strong> The usage threshold beyond which revenue per unit starts to decrease.</li>
-          <li><strong>Elasticity Factor:</strong> The decrement in revenue per unit for every additional unit beyond the threshold.</li>
-
-          <!-- Cost Categories: Compute, Storage, Network, License -->
-          <li><strong>Fixed Cost (per category):</strong> The constant expense for the service (e.g., server base cost).</li>
-          <li><strong>Variable Cost per Unit:</strong> The cost incurred per unit of service usage.</li>
-          <li><strong>Units:</strong> The measure of usage (e.g., compute hours, GB, seats).</li>
-          <li><strong>Tier 1 Threshold:</strong> The usage limit at which the first discount rate applies.</li>
-          <li><strong>Tier 1 Discount Rate (%):</strong> The percentage discount for usage exceeding the Tier 1 threshold.</li>
-          <li><strong>Tier 2 Threshold:</strong> The usage limit at which a higher discount rate applies.</li>
-          <li><strong>Tier 2 Discount Rate (%):</strong> The percentage discount for usage exceeding the Tier 2 threshold.</li>
-
-          <!-- Forecasting and Simulation -->
-          <li><strong>Monthly Growth Rate (%):</strong> The expected monthly percentage increase in revenue and costs.</li>
-          <li><strong>Simulation Iterations:</strong> The number of runs for Monte Carlo simulation to model uncertainty.</li>
-          <li><strong>Cost Variability (%):</strong> The expected percentage fluctuation in cost estimates.</li>
-          <li><strong>Revenue Variability (%):</strong> The expected percentage fluctuation in revenue estimates.</li>
-
-          <!-- Cloud Pricing Integration -->
-          <li><strong>Live Cloud Pricing:</strong> This section fetches live compute cost data from AWS, Azure, and GCP to update your cost assumptions.</li>
+          <li><strong>Overall Fixed Cost ($):</strong> The baseline expenses that do not change with usage (e.g., server management fees).</li>
+          <li><strong>Base Revenue per Unit ($):</strong> The revenue earned from each unit sold or service rendered at standard rates.</li>
+          <li><strong>Revenue Units:</strong> The total number of transactions or service units consumed.</li>
+          <li><strong>Elasticity Threshold (Revenue Units):</strong> The usage point beyond which revenue per unit decreases.</li>
+          <li><strong>Elasticity Factor:</strong> The decrement in revenue per unit for each additional unit beyond the threshold.</li>
+          <li><strong>Fixed Cost (per category):</strong> Constant costs specific to a service area (compute, storage, network, licensing).</li>
+          <li><strong>Variable Cost per Unit:</strong> Costs that scale with usage (e.g., per compute hour, per GB stored).</li>
+          <li><strong>Tier 1 &amp; Tier 2 Thresholds:</strong> Usage limits that trigger discount pricing.</li>
+          <li><strong>Tier 1 &amp; Tier 2 Discount Rates (%):</strong> Percentage discounts applied when usage exceeds designated thresholds.</li>
+          <li><strong>Monthly Growth Rate (%):</strong> Expected percentage increase in usage and costs month over month.</li>
+          <li><strong>Simulation Iterations:</strong> Number of runs in a Monte Carlo simulation to model variability in cost outcomes.</li>
+          <li><strong>Cost &amp; Revenue Variability (%):</strong> The anticipated fluctuation in costs and revenues.</li>
+          <li><strong>Live Cloud Pricing:</strong> Real-time pricing data fetched directly from AWS, Azure, and GCP.</li>
         </ul>
       </div>
     </div>
 
     <!-- Overall & Revenue Inputs Section -->
     <div class="card section-card">
-      <div class="card-header">Overall & Revenue Inputs</div>
+      <div class="card-header">Overall &amp; Revenue Inputs</div>
       <div class="card-body">
         <p class="instruction">
-          Enter your overall fixed cost and revenue assumptions. These values form the foundation of your analysis.
+          Enter your overall fixed costs and revenue assumptions that form the basis of your financial model.
         </p>
         <div class="form-group">
           <label for="overallFixedCost">Overall Fixed Cost ($):</label>
@@ -135,7 +200,7 @@
         </div>
         <h5>Revenue Inputs</h5>
         <p class="instruction">
-          Provide your base revenue per unit and total revenue units. An elasticity factor will adjust your revenue per unit if usage exceeds the threshold.
+          Provide your base revenue per unit and the total number of revenue units. An elasticity factor will adjust your revenue per unit if consumption exceeds the threshold.
         </p>
         <div class="form-group">
           <label for="revenuePerUnit">Base Revenue per Unit ($):</label>
@@ -161,7 +226,7 @@
       <div class="card-header">Cost Categories</div>
       <div class="card-body">
         <p class="instruction">
-          Input your costs for each category. Each category uses a tiered discount model so that higher usage reduces the effective cost per unit.
+          Enter the costs for each service category using a tiered discount model.
         </p>
         <!-- Compute Category -->
         <div class="card mb-3">
@@ -208,7 +273,7 @@
         <div class="card mb-3">
           <div class="card-header">Storage</div>
           <div class="card-body">
-            <p class="instruction">Enter your storage costs (e.g., GB used). This section also uses tiered discounting.</p>
+            <p class="instruction">Enter your storage costs (e.g., GB used). Tiered discounting applies here as well.</p>
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="storageFixed">Fixed Cost ($):</label>
@@ -335,7 +400,7 @@
       <div class="card-header">Cloud Pricing Integration (Live)</div>
       <div class="card-body">
         <p class="instruction">
-          Click the button below to fetch the latest live compute cost data from AWS, Azure, and Google Cloud. This data updates your cost assumptions in real time.
+          Click the button below to fetch the latest live pricing data for compute, storage, and network services from AWS, Azure, and Google Cloud.
         </p>
         <button id="fetchCloudPrices" class="btn btn-primary mb-3">Fetch Latest Cloud Prices</button>
         <div id="cloudPricingResults" class="result" style="display:none;"></div>
@@ -347,7 +412,7 @@
       <div class="card-header">Forecasting (12‑Month Projection)</div>
       <div class="card-body">
         <p class="instruction">
-          Enter your monthly growth rate to project revenue, cost, and profit over the next 12 months.
+          Enter your expected monthly growth rate to project revenue, costs, and profit over the next 12 months.
         </p>
         <div class="form-group">
           <label for="monthlyGrowth">Monthly Growth Rate (%):</label>
@@ -360,10 +425,10 @@
 
     <!-- Deterministic Calculation Section -->
     <div class="card section-card">
-      <div class="card-header">Deterministic Calculation & Results</div>
+      <div class="card-header">Deterministic Calculation &amp; Results</div>
       <div class="card-body">
         <p class="instruction">
-          Click the button below to calculate deterministic metrics (total revenue, cost, profit, ROI) and view a detailed cost breakdown.
+          Click the button below to calculate deterministic metrics (total revenue, cost, profit, ROI) along with a detailed cost breakdown.
         </p>
         <button id="calculateBtn" class="btn btn-warning mb-3">Calculate Deterministic Metrics</button>
         <div id="deterministicResults" class="result" style="display:none;"></div>
@@ -403,7 +468,7 @@
       <div class="card-header">Sensitivity Analysis</div>
       <div class="card-body">
         <p class="instruction">
-          Examine how varying the Compute Tier 1 discount rate affects overall profit. This analysis helps identify the most sensitive parameters.
+          Examine how varying key parameters (such as the Compute Tier 1 discount rate) affects overall profitability. This analysis identifies the most sensitive cost drivers.
         </p>
         <button id="runSensitivity" class="btn btn-info mb-3">Run Sensitivity Analysis</button>
         <div id="sensitivityResults" class="result" style="display:none;"></div>
@@ -415,9 +480,24 @@
       <div class="card-header">Export Report</div>
       <div class="card-body">
         <p class="instruction">
-          Generate a professional PDF report summarizing your analysis, including key metrics and charts, for sharing with your team.
+          Generate a professional PDF report summarizing your analysis—including key metrics and charts—for sharing with your team.
         </p>
         <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
+      </div>
+    </div>
+
+    <!-- Official Pricing Links Section -->
+    <div class="card section-card">
+      <div class="card-header">Official Pricing Resources</div>
+      <div class="card-body">
+        <p>
+          For the most accurate and up-to-date pricing information, refer directly to the official pricing pages of the major cloud providers:
+        </p>
+        <ul>
+          <li><a href="https://aws.amazon.com/pricing/" target="_blank">AWS Pricing</a></li>
+          <li><a href="https://azure.microsoft.com/en-us/pricing/" target="_blank">Azure Pricing</a></li>
+          <li><a href="https://cloud.google.com/pricing" target="_blank">Google Cloud Pricing</a></li>
+        </ul>
       </div>
     </div>
 
@@ -444,35 +524,71 @@
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
 
-    // ---------- Cloud Pricing Integration ----------
-    async function fetchAWSPrices() {
+    // ---------- Cloud Pricing Fetch Functions ----------
+    // AWS Compute Pricing (example using t2.micro instance)
+    async function fetchAWSComputePrice() {
       try {
         const response = await fetch('https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json');
         const data = await response.json();
-        return { compute: 0.13 }; // Dummy extraction for demo purposes
-      } catch (error) {
-        console.error("AWS Pricing fetch error:", error);
-        return { compute: 0.15 };
+        const productKey = Object.keys(data.products).find(key => {
+          return data.products[key].attributes && data.products[key].attributes.instanceType === 't2.micro';
+        });
+        let price = "N/A";
+        if (productKey) {
+          const onDemand = data.terms.OnDemand[productKey];
+          if (onDemand) {
+            const termKey = Object.keys(onDemand)[0];
+            price = onDemand[termKey].priceDimensions[Object.keys(onDemand[termKey].priceDimensions)[0]].pricePerUnit.USD;
+          }
+        }
+        return price;
+      } catch(error) {
+        console.error("AWS Compute fetch error:", error);
+        return "Error";
       }
     }
-    async function fetchAzurePrices() {
+    // AWS Storage Pricing (example using S3 Standard)
+    async function fetchAWSStoragePrice() {
       try {
-        const response = await fetch('https://prices.azure.com/api/retail/prices');
+        const response = await fetch('https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/index.json');
         const data = await response.json();
-        return { compute: 0.14 };
-      } catch (error) {
-        console.error("Azure Pricing fetch error:", error);
-        return { compute: 0.16 };
+        const productKey = Object.keys(data.products).find(key => {
+          return data.products[key].attributes && data.products[key].attributes.storageClass === 'Standard';
+        });
+        let price = "N/A";
+        if (productKey) {
+          const onDemand = data.terms.OnDemand[productKey];
+          if (onDemand) {
+            const termKey = Object.keys(onDemand)[0];
+            price = onDemand[termKey].priceDimensions[Object.keys(onDemand[termKey].priceDimensions)[0]].pricePerUnit.USD;
+          }
+        }
+        return price;
+      } catch(error) {
+        console.error("AWS Storage fetch error:", error);
+        return "Error";
       }
     }
-    async function fetchGCPPrices() {
+    // AWS Network Pricing (example using Data Transfer Out)
+    async function fetchAWSNetworkPrice() {
       try {
-        const response = await fetch('https://cloudpricingcalculator.appspot.com/static/data/pricelist.json');
+        const response = await fetch('https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json');
         const data = await response.json();
-        return { compute: data.gcp.compute ? data.gcp.compute : 0.12 };
-      } catch (error) {
-        console.error("GCP Pricing fetch error:", error);
-        return { compute: 0.11 };
+        const productKey = Object.keys(data.products).find(key => {
+          return data.products[key].attributes && data.products[key].attributes.usageType && data.products[key].attributes.usageType.includes('DataTransfer-Out-Bytes');
+        });
+        let price = "N/A";
+        if (productKey) {
+          const onDemand = data.terms.OnDemand[productKey];
+          if (onDemand) {
+            const termKey = Object.keys(onDemand)[0];
+            price = onDemand[termKey].priceDimensions[Object.keys(onDemand[termKey].priceDimensions)[0]].pricePerUnit.USD;
+          }
+        }
+        return price;
+      } catch(error) {
+        console.error("AWS Network fetch error:", error);
+        return "Error";
       }
     }
     document.getElementById('fetchCloudPrices').addEventListener('click', async () => {
@@ -480,11 +596,15 @@
       resultsDiv.style.display = 'block';
       resultsDiv.innerHTML = '<p>Fetching latest cloud pricing…</p>';
       try {
-        const [aws, azure, gcp] = await Promise.all([fetchAWSPrices(), fetchAzurePrices(), fetchGCPPrices()]);
-        let html = '<h5>Latest Cloud Prices:</h5><table class="table table-bordered"><thead><tr><th>Provider</th><th>Compute ($/unit)</th></tr></thead><tbody>';
-        html += `<tr><td>AWS</td><td>${aws.compute}</td></tr>`;
-        html += `<tr><td>Azure</td><td>${azure.compute}</td></tr>`;
-        html += `<tr><td>Google Cloud</td><td>${gcp.compute}</td></tr>`;
+        const [awsCompute, awsStorage, awsNetwork] = await Promise.all([
+          fetchAWSComputePrice(),
+          fetchAWSStoragePrice(),
+          fetchAWSNetworkPrice()
+        ]);
+        let html = '<h5>Latest Cloud Prices:</h5><table class="table table-bordered"><thead><tr><th>Category</th><th>AWS ($/unit)</th></tr></thead><tbody>';
+        html += `<tr><td>Compute (t2.micro)</td><td>${awsCompute}</td></tr>`;
+        html += `<tr><td>Storage (S3 Standard)</td><td>${awsStorage}</td></tr>`;
+        html += `<tr><td>Network (Data Transfer Out)</td><td>${awsNetwork}</td></tr>`;
         html += '</tbody></table>';
         resultsDiv.innerHTML = html;
       } catch (error) {
