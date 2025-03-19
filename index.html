@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinOps++</title>
-  <!-- Bootstrap CSS for modern styling and collapse functionality -->
+  <!-- Bootstrap CSS for styling and collapse functionality -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS with neon green text, dark theme, and ticker animation -->
+  <!-- Custom CSS with neon green styling, dark theme, and ticker animation -->
   <style>
     body { 
       background: #121212; 
@@ -96,17 +96,19 @@
       white-space: nowrap;
       padding-left: 100%;
       animation: ticker 15s linear infinite;
-      font-weight: bold;
+      font-weight: normal;
       color: #39FF14;
     }
     @keyframes ticker {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
+    /* Ensure exported report text does not overlap */
+    .export-margin { margin-bottom: 12px; }
   </style>
 </head>
 <body>
-  <!-- Header (always visible) -->
+  <!-- Header -->
   <div class="container">
     <div class="header">
       <h1>FinOps++</h1>
@@ -115,7 +117,7 @@
   </div>
 
   <div class="container">
-    <!-- Extended Overview Section -->
+    <!-- Overview Section -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#overviewSection" aria-expanded="true" aria-controls="overviewSection">
         Overview
@@ -123,19 +125,19 @@
       <div id="overviewSection" class="collapse show">
         <div class="card-body">
           <p>
-            Cloud computing has transformed modern business by providing scalable, on-demand resources—but with this flexibility comes complex, dynamic pricing that can lead to unforeseen expenses. FinOps++ is designed to help you manage these challenges by integrating live pricing data (with fallback values to avoid timeouts) from major cloud providers. It empowers you to build detailed cost models, create accurate forecasts, and run sophisticated simulations to ensure that your cloud spending is both predictable and optimized.
+            Cloud computing has transformed the way businesses operate by providing scalable, on-demand resources. However, with flexibility comes complexity—dynamic pricing models, tiered discounts, and variable usage patterns can easily lead to unforeseen expenses. FinOps++ is engineered to bring clarity to this complexity by integrating live pricing data (with fallback values) from major cloud providers, enabling you to build detailed cost models and forecasts that are essential for strategic budgeting and financial planning.
           </p>
           <p>
-            By breaking down overall cloud expenditure into granular components such as compute, storage, network, and licensing, FinOps++ allows you to see how usage patterns and tiered discounts impact your bottom line. The platform mirrors real-world pricing models, giving you a clear view of how exceeding thresholds can trigger discount rates or, conversely, drive costs upward.
+            This tool breaks down your overall cloud spending into key components such as compute, storage, network, and licensing. By mirroring real-world pricing structures, FinOps++ allows you to see how exceeding certain usage thresholds can trigger discount tiers or drive costs upward, providing you with actionable insights.
           </p>
           <p>
-            With robust forecasting capabilities, you can project costs over a 12‑month period based on anticipated growth. Monte Carlo simulations provide a statistical understanding of risk by running thousands of iterations, while sensitivity analysis helps pinpoint which variables most affect your finances.
+            With robust forecasting capabilities, you can project your cloud expenses over a 12‑month period based on expected growth rates. The platform also includes Monte Carlo simulations to statistically model uncertainty and risk, while sensitivity analysis identifies which variables have the greatest impact on your overall costs.
           </p>
           <p>
-            FinOps++ is not just a calculator—it’s a comprehensive tool that educates both IT and finance teams on the intricacies of cloud pricing. Detailed variable explanations and practical use cases ensure that you understand every aspect of your cost model, enabling data-driven decisions and effective negotiations with cloud providers.
+            FinOps++ isn’t just a calculator—it’s a comprehensive, interactive platform that educates both IT and finance teams on cloud cost dynamics. Detailed explanations for every variable and a suite of advanced simulation tools empower you to make data-driven decisions, negotiate better pricing with providers, and proactively manage your budget.
           </p>
           <p>
-            Whether you are a startup or a large enterprise, FinOps++ offers the insights needed to turn cloud cost management from a reactive process into a proactive strategic advantage, ultimately leading to improved budgeting, reduced financial risk, and enhanced operational efficiency.
+            Whether you’re a startup deploying your first cloud solution or a large enterprise managing a multi-cloud strategy, FinOps++ equips you with the insights needed to prevent budget overruns, optimize resource allocation, and improve operational efficiency. It turns reactive cost management into a proactive strategic advantage.
           </p>
         </div>
       </div>
@@ -149,7 +151,7 @@
       <div id="useCaseSection" class="collapse show">
         <div class="card-body">
           <p>
-            <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," an e-commerce company relying on cloud services to power its website, manage customer data, and process orders. Following a highly successful marketing campaign, your website traffic surges by 300%, dramatically increasing your consumption of compute, storage, and network resources. This unexpected spike leads to significant cost overages that put your quarterly budget at risk.
+            <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," an e-commerce company that relies on cloud services to host its website, manage customer data, and process transactions. After launching a major marketing campaign, your website experiences a 300% surge in traffic. This sudden spike in demand causes your cloud usage to skyrocket—particularly in compute, storage, and network services—resulting in significant cost overages that threaten to derail your quarterly budget.
           </p>
           <p>
             <strong>Step-by-Step Process Using FinOps++:</strong>
@@ -157,35 +159,35 @@
           <ol>
             <li>
               <strong>Baseline Data Entry:</strong>
-              <br>Input your fixed operational costs (e.g., management fees, licensing) along with revenue assumptions like average revenue per transaction and expected transaction volume. This establishes your financial baseline.
+              <br>Enter your fixed operational costs (such as server management fees and licensing) along with revenue assumptions (average revenue per transaction and expected transaction volume). This establishes your financial baseline.
             </li>
             <li>
               <strong>Detailed Cost Modeling:</strong>
-              <br>Break down your cloud spending into categories—compute, storage, network, and licensing—using tiered discount models that match your provider’s pricing. This reveals which cost centers are most sensitive to usage surges.
+              <br>Input the costs for each cloud service category—compute, storage, network, and licensing—using tiered discount models that mirror your provider’s pricing. This helps you identify which components drive the majority of your expenses.
             </li>
             <li>
               <strong>Advanced Settings:</strong>
-              <br>In the Advanced Settings section, configure parameters such as the Auto‑Scaling Factor (which lowers compute costs when resources scale efficiently) and the Dynamic Pricing Adjustment (which boosts revenue per unit under high-demand conditions). These settings let you simulate various strategies to control costs.
+              <br>Configure advanced parameters like the Auto‑Scaling Factor (to lower compute costs when resources scale efficiently) and Dynamic Pricing Adjustment (to simulate revenue boosts during high-demand periods). These settings let you experiment with strategies to mitigate overages.
             </li>
             <li>
               <strong>Deterministic Calculation:</strong>
-              <br>Run the deterministic calculation to get immediate key metrics—total revenue, total cost, profit, profit margin, and ROI. This helps you gauge the impact of the surge and assess if your current strategy is sustainable.
+              <br>Run the deterministic calculation to generate key metrics—total revenue, total cost, profit, profit margin, and ROI. This gives you an immediate snapshot of the financial impact of the surge.
             </li>
             <li>
               <strong>Forecasting Future Costs:</strong>
-              <br>Use the forecasting module to project cloud costs over the next 12 months based on your monthly growth rate. This forecast will show you potential future overages, allowing you to proactively plan for additional resources or budget adjustments.
+              <br>Use the 12‑month forecasting module to project future cloud costs based on your monthly growth rate. This projection helps you plan for additional resources or budget adjustments if similar surges occur again.
             </li>
             <li>
               <strong>Monte Carlo Simulation:</strong>
-              <br>Run a Monte Carlo simulation to model uncertainty by executing thousands of iterations. The resulting probability distribution enables you to quantify risk and set aside appropriate contingency funds.
+              <br>Run thousands of simulation iterations to create a probability distribution of potential outcomes. This statistical analysis quantifies risk and aids in setting aside contingency funds.
             </li>
             <li>
               <strong>Sensitivity Analysis:</strong>
-              <br>Perform sensitivity analysis on key variables such as discount rates and auto-scaling efficiency. This identifies the factors that most influence your costs, guiding you in negotiations and internal policy adjustments.
+              <br>Perform sensitivity analysis on key variables (like discount rates or auto‑scaling efficiency) to determine which factors most affect your costs. Use these insights to negotiate improved pricing or adjust internal processes.
             </li>
           </ol>
           <p>
-            <strong>Outcome:</strong> By following these steps with FinOps++, you gain a comprehensive understanding of your cloud spending drivers. In response, you negotiate better volume discounts, adjust auto-scaling policies, and refine your budgeting forecasts. This proactive approach transforms a potential crisis into an opportunity for strategic improvement.
+            <strong>Outcome:</strong> After using FinOps++ in this scenario, you gain a clear understanding of the factors behind your unexpected cost overages. This enables you to negotiate better volume discounts, fine-tune auto-scaling policies, and revise your budget forecasts—turning a potential crisis into a strategic opportunity.
           </p>
         </div>
       </div>
@@ -524,7 +526,7 @@
             Click the button below to calculate key financial metrics and see a detailed cost breakdown.
           </p>
           <button id="calculateBtn" class="btn btn-warning mb-3">Calculate Deterministic Metrics</button>
-          <div id="deterministicResults" class="result" style="display:none;"></div>
+          <div id="deterministicResults" class="result export-margin" style="display:none;"></div>
           <canvas id="pieChart" width="400" height="200" style="display:none;"></canvas>
         </div>
       </div>
@@ -555,7 +557,7 @@
             </div>
           </div>
           <button id="runSimulation" class="btn btn-danger mb-3">Run Simulation</button>
-          <div id="simulationResults" class="result" style="display:none;"></div>
+          <div id="simulationResults" class="result export-margin" style="display:none;"></div>
           <canvas id="histogramChart" width="600" height="300" style="display:none;"></canvas>
         </div>
       </div>
@@ -572,7 +574,24 @@
             Examine how varying key parameters (such as the Compute Tier 1 discount rate) affects overall profitability.
           </p>
           <button id="runSensitivity" class="btn btn-info mb-3">Run Sensitivity Analysis</button>
-          <div id="sensitivityResults" class="result" style="display:none;"></div>
+          <div id="sensitivityResults" class="result export-margin" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <div class="card section-card">
+      <div class="card-header" data-toggle="collapse" data-target="#notesSection" aria-expanded="true" aria-controls="notesSection">
+        Notes
+      </div>
+      <div id="notesSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">
+            Enter your notes below. These notes will be saved locally and included in your exported PDF report.
+          </p>
+          <div class="form-group">
+            <textarea id="userNotes" class="form-control" rows="4" placeholder="Enter your notes here..."></textarea>
+          </div>
         </div>
       </div>
     </div>
@@ -585,7 +604,7 @@
       <div id="exportSection" class="collapse show">
         <div class="card-body">
           <p class="instruction">
-            Generate a professional PDF report summarizing your analysis—including key metrics and charts—for sharing with your team.
+            Generate a professional PDF report summarizing your analysis—including key metrics, charts, and your notes—for sharing with your team.
           </p>
           <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
         </div>
@@ -617,19 +636,19 @@
     </footer>
   </div>
 
-  <!-- Dependencies: jQuery, Bootstrap JS (for collapse), Chart.js, jsPDF -->
+  <!-- Dependencies: jQuery, Bootstrap JS, Chart.js, jsPDF -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    // ---------- Persistence: Save inputs to localStorage ----------
+    // ---------- Persistence: Save inputs and textareas to localStorage ----------
     function persistInputs() {
-      const inputs = document.querySelectorAll('input[type="number"]');
-      inputs.forEach(input => {
-        const stored = localStorage.getItem(input.id);
-        if (stored !== null) { input.value = stored; }
-        input.addEventListener('change', () => { localStorage.setItem(input.id, input.value); });
+      const elements = document.querySelectorAll('input[type="number"], textarea');
+      elements.forEach(el => {
+        const stored = localStorage.getItem(el.id);
+        if (stored !== null) { el.value = stored; }
+        el.addEventListener('change', () => { localStorage.setItem(el.id, el.value); });
       });
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
@@ -654,7 +673,7 @@
           fetchAWSStoragePrice(),
           fetchAWSNetworkPrice()
         ]);
-        let html = '<h5>Fallback AWS Prices:</h5><table class="table table-bordered"><thead><tr><th>Category</th><th>Price ($/unit)</th></tr></thead><tbody>';
+        let html = '<h5 class="export-margin">Fallback AWS Prices:</h5><table class="table table-bordered"><thead><tr><th>Category</th><th>Price ($/unit)</th></tr></thead><tbody>';
         html += `<tr><td>Compute (t2.micro)</td><td>${awsCompute}</td></tr>`;
         html += `<tr><td>Storage (S3 Standard)</td><td>${awsStorage}</td></tr>`;
         html += `<tr><td>Network (Data Transfer Out)</td><td>${awsNetwork}</td></tr>`;
@@ -703,7 +722,7 @@
       if (revenueUnits > elasticityThresholdRev) {
         effectiveRevenuePerUnit = Math.max(revenuePerUnit - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
       }
-      effectiveRevenuePerUnit = effectiveRevenuePerUnit * (1 + dynamicPricingAdjustment / 100);
+      effectiveRevenuePerUnit *= (1 + dynamicPricingAdjustment / 100);
       const totalRevenue = revenueUnits * effectiveRevenuePerUnit;
 
       // Compute costs
@@ -716,7 +735,7 @@
       const computeTier2Rate = parseFloat(document.getElementById('computeTier2Rate').value);
       let computeCost = computeFixed + computeCategoryCost(computeUnits, computeVariable, computeTier1Threshold, computeTier1Rate, computeTier2Threshold, computeTier2Rate);
       // Apply auto-scaling adjustment
-      computeCost = computeCost * (1 - autoScalingFactor / 100);
+      computeCost *= (1 - autoScalingFactor / 100);
 
       // Storage costs
       const storageFixed = parseFloat(document.getElementById('storageFixed').value);
@@ -755,17 +774,12 @@
 
       const resultsDiv = document.getElementById('deterministicResults');
       resultsDiv.style.display = 'block';
-      resultsDiv.innerHTML = `
-        <h5>Deterministic Results</h5>
-        <p><strong>Total Revenue:</strong> $${totalRevenue.toFixed(2)}</p>
-        <p><strong>Total Cost:</strong> $${totalCost.toFixed(2)}</p>
-        <p><strong>Profit:</strong> $${profit.toFixed(2)}</p>
-        <p><strong>Profit Margin:</strong> ${profitMargin}%</p>
-        <p><strong>ROI:</strong> ${roi}%</p>
-        <h6>Cost Breakdown:</h6>
-        <p>Compute: $${computeCost.toFixed(2)}, Storage: $${storageCost.toFixed(2)}, Network: $${networkCost.toFixed(2)}, License: $${licenseCost.toFixed(2)}</p>
-      `;
-
+      let deterministicText = `Total Revenue: $${totalRevenue.toFixed(2)}\nTotal Cost: $${totalCost.toFixed(2)}\nProfit: $${profit.toFixed(2)}\nProfit Margin: ${profitMargin}%\nROI: ${roi}%\nCost Breakdown:\nCompute: $${computeCost.toFixed(2)}, Storage: $${storageCost.toFixed(2)}, Network: $${networkCost.toFixed(2)}, License: $${licenseCost.toFixed(2)}`;
+      // Split text to prevent overlapping in the PDF
+      let lines = window.jspdf.jsPDF().splitTextToSize(deterministicText, 180);
+      resultsDiv.innerHTML = `<pre>${deterministicText}</pre>`;
+      
+      // Draw pie chart for visual breakdown
       const pieCtx = document.getElementById('pieChart').getContext('2d');
       document.getElementById('pieChart').style.display = 'block';
       if (window.myPieChart) window.myPieChart.destroy();
@@ -823,7 +837,7 @@
         if (currentRevenueUnits > elasticityThresholdRev) {
           effectiveRevenuePerUnit = Math.max(revenuePerUnit - elasticityFactorRev * (currentRevenueUnits - elasticityThresholdRev), 0);
         }
-        effectiveRevenuePerUnit = effectiveRevenuePerUnit * (1 + dynamicPricingAdjustment / 100);
+        effectiveRevenuePerUnit *= (1 + dynamicPricingAdjustment / 100);
         const totalRev = currentRevenueUnits * effectiveRevenuePerUnit;
         forecastMonths.push("Month " + m);
         forecastRevenue.push(totalRev);
@@ -907,7 +921,7 @@
           simEffectiveRevenue = Math.max(revenuePerUnit * revenueMultiplier - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
         }
         // Apply dynamic pricing adjustment
-        simEffectiveRevenue = simEffectiveRevenue * (1 + dynamicPricingAdjustment / 100);
+        simEffectiveRevenue *= (1 + dynamicPricingAdjustment / 100);
         const totalSimRevenue = revenueUnits * simEffectiveRevenue;
         simulationProfits.push(totalSimRevenue - totalSimCost);
       }
@@ -935,13 +949,8 @@
 
       const simResultsDiv = document.getElementById('simulationResults');
       simResultsDiv.style.display = 'block';
-      simResultsDiv.innerHTML = `
-        <h5>Simulation Summary (over ${simIterations} iterations):</h5>
-        <p>Average Profit: $${avgProfit.toFixed(2)}</p>
-        <p>Minimum Profit: $${minProfit.toFixed(2)}</p>
-        <p>Maximum Profit: $${maxProfit.toFixed(2)}</p>
-        <p>Standard Deviation: $${stdProfit.toFixed(2)}</p>
-      `;
+      let simulationText = `Simulation Summary (over ${simIterations} iterations):\nAverage Profit: $${avgProfit.toFixed(2)}\nMinimum Profit: $${minProfit.toFixed(2)}\nMaximum Profit: $${maxProfit.toFixed(2)}\nStandard Deviation: $${stdProfit.toFixed(2)}`;
+      simResultsDiv.innerHTML = `<pre>${simulationText}</pre>`;
 
       const histCtx = document.getElementById('histogramChart').getContext('2d');
       document.getElementById('histogramChart').style.display = 'block';
@@ -1018,48 +1027,82 @@
 
       const sensitivityResultsDiv = document.getElementById('sensitivityResults');
       sensitivityResultsDiv.style.display = 'block';
-      let tableHTML = '<h5>Sensitivity Analysis: Profit vs. Compute Tier 1 Discount Rate</h5><table class="table table-sm table-bordered"><thead><tr><th>Tier 1 Discount Rate</th><th>Profit ($)</th></tr></thead><tbody>';
-      for (let i = 0; i < sensitivityLabels.length; i++) {
-        tableHTML += `<tr><td>${sensitivityLabels[i]}</td><td>${sensitivityData[i].toFixed(2)}</td></tr>`;
-      }
-      tableHTML += '</tbody></table>';
-      sensitivityResultsDiv.innerHTML = tableHTML;
+      let sensitivityText = `Sensitivity Analysis: Profit vs. Compute Tier 1 Discount Rate\n`;
+      sensitivityText += sensitivityLabels.map((label, i) => `${label}: $${sensitivityData[i].toFixed(2)}`).join("\n");
+      sensitivityResultsDiv.innerHTML = `<pre>${sensitivityText}</pre>`;
     });
 
     // ---------- Export Report as PDF ----------
     async function exportReport() {
-      const deterministicHTML = document.getElementById('deterministicResults').innerText;
-      const simulationHTML = document.getElementById('simulationResults').innerText;
-      const sensitivityHTML = document.getElementById('sensitivityResults').innerText;
-      const forecastCanvas = document.getElementById('forecastChart');
-
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
-
+      let yPos = 15;
+      
+      // Title
       doc.setFontSize(16);
-      doc.text("FinOps Analysis Report", 10, 15);
+      doc.text("FinOps++ Analysis Report", 10, yPos);
+      yPos += 10;
+      
+      // Overview
       doc.setFontSize(12);
-      doc.text("Deterministic Metrics:", 10, 25);
-      doc.text(deterministicHTML, 10, 35);
-
-      let yPos = 60;
-      doc.text("Monte Carlo Simulation Summary:", 10, yPos);
-      yPos += 10;
-      doc.text(simulationHTML, 10, yPos);
-
-      yPos += 20;
-      doc.text("Sensitivity Analysis:", 10, yPos);
-      yPos += 10;
-      doc.text(sensitivityHTML, 10, yPos);
-
+      doc.text("Overview:", 10, yPos);
+      yPos += 6;
+      let overviewText = document.querySelector("#overviewSection .card-body").innerText;
+      let overviewLines = doc.splitTextToSize(overviewText, 180);
+      doc.text(overviewLines, 10, yPos);
+      yPos += overviewLines.length * 6 + 4;
+      
+      // Practical Use Cases
+      doc.text("Practical Use Cases:", 10, yPos);
+      yPos += 6;
+      let useCaseText = document.querySelector("#useCaseSection .card-body").innerText;
+      let useCaseLines = doc.splitTextToSize(useCaseText, 180);
+      doc.text(useCaseLines, 10, yPos);
+      yPos += useCaseLines.length * 6 + 4;
+      
+      // Deterministic Results
+      doc.text("Deterministic Results:", 10, yPos);
+      yPos += 6;
+      let detText = document.getElementById("deterministicResults").innerText;
+      let detLines = doc.splitTextToSize(detText, 180);
+      doc.text(detLines, 10, yPos);
+      yPos += detLines.length * 6 + 4;
+      
+      // Forecast Chart (if visible)
+      const forecastCanvas = document.getElementById('forecastChart');
       if (forecastCanvas && forecastCanvas.style.display !== 'none') {
         const imgData = forecastCanvas.toDataURL("image/png");
-        yPos += 30;
-        doc.text("12‑Month Forecast Chart:", 10, yPos);
         yPos += 10;
+        doc.text("12‑Month Forecast Chart:", 10, yPos);
+        yPos += 6;
         doc.addImage(imgData, 'PNG', 10, yPos, 180, 80);
+        yPos += 80 + 4;
       }
-
+      
+      // Simulation Summary
+      doc.text("Monte Carlo Simulation Summary:", 10, yPos);
+      yPos += 6;
+      let simText = document.getElementById("simulationResults").innerText;
+      let simLines = doc.splitTextToSize(simText, 180);
+      doc.text(simLines, 10, yPos);
+      yPos += simLines.length * 6 + 4;
+      
+      // Sensitivity Analysis
+      doc.text("Sensitivity Analysis:", 10, yPos);
+      yPos += 6;
+      let sensText = document.getElementById("sensitivityResults").innerText;
+      let sensLines = doc.splitTextToSize(sensText, 180);
+      doc.text(sensLines, 10, yPos);
+      yPos += sensLines.length * 6 + 4;
+      
+      // Notes
+      doc.text("Notes:", 10, yPos);
+      yPos += 6;
+      let notes = document.getElementById("userNotes").value;
+      let notesLines = doc.splitTextToSize(notes, 180);
+      doc.text(notesLines, 10, yPos);
+      yPos += notesLines.length * 6 + 4;
+      
       doc.save("FinOps_Report.pdf");
     }
     document.getElementById('exportReportBtn').addEventListener('click', exportReport);
