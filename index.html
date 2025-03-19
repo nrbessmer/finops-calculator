@@ -4,32 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinOps++</title>
-  <!-- Bootstrap CSS for styling and collapse functionality -->
+  <!-- Bootstrap CSS for collapse and layout -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS with white background and black text -->
+  <!-- Custom CSS -->
   <style>
     body { 
-      background: #ffffff; 
+      background: #f7f7f7; 
       font-family: Tahoma, sans-serif;
-      color: #000000; /* Black text */
+      color: #000; /* Black text */
       padding-bottom: 2rem;
     }
-    /* Non-heading text normal weight */
-    p, li, label, input, button, textarea { 
-      font-weight: normal; 
-    }
+    /* Ensure non-heading text is normal weight */
+    p, li, label, input, button, textarea { font-weight: normal; }
     a { 
-      color: #0000EE; /* Default link blue */
+      color: #0000EE; /* Default blue links */
       text-decoration: none;
     }
-    a:hover { 
-      text-decoration: underline; 
-    }
+    a:hover { text-decoration: underline; }
     /* Header styling */
     .header {
       text-align: center;
       padding: 2rem 0;
-      border-bottom: 3px solid #000;
+      border-bottom: 3px solid #4a90e2;
       margin-bottom: 2rem;
     }
     .header h1 {
@@ -38,6 +34,7 @@
       letter-spacing: 1px;
       margin-bottom: 0.5rem;
       font-weight: bold;
+      color: #4a90e2;
     }
     .header p {
       font-size: 1.2rem;
@@ -46,25 +43,23 @@
     /* Card styling */
     .section-card { 
       margin-bottom: 1.5rem; 
-      border: 1px solid #ccc;
-      background: #ffffff;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid #ddd;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
     .card-header { 
-      background-color: #f0f0f0; 
-      color: #000;
+      background-color: #4a90e2; 
+      color: #fff; 
       cursor: pointer;
       user-select: none;
       text-transform: uppercase;
       font-weight: bold;
       padding: 0.75rem 1.25rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
     }
-    .card-header:hover { 
-      background-color: #e0e0e0; 
-    }
+    .card-header:hover { background-color: #3b7cc4; }
     .card-body { 
-      background: #ffffff; 
+      background: #fff; 
       color: #000;
       padding: 1rem 1.25rem;
     }
@@ -73,30 +68,31 @@
       margin-bottom: 1rem; 
     }
     .form-control {
-      background: #ffffff;
+      background: #fff;
       border: 1px solid #ccc;
       color: #000;
     }
     .form-control:focus {
-      background: #ffffff;
-      border-color: #000;
+      background: #fff;
+      border-color: #4a90e2;
       box-shadow: none;
       color: #000;
     }
     .btn {
-      border: 1px solid #000;
+      border: 1px solid #4a90e2;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      background: #f8f8f8;
-      color: #000;
+      background: #4a90e2;
+      color: #fff;
+      margin-bottom: 1rem;
     }
     footer { 
       text-align: center; 
       padding: 1rem 0; 
       margin-top: 2rem; 
-      background: #ffffff; 
+      background: #fff; 
       color: #000;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #ddd;
     }
     /* Extra spacing for exported PDF */
     .export-margin { margin-bottom: 12px; }
@@ -120,10 +116,10 @@
       <div id="overviewSection" class="collapse show">
         <div class="card-body">
           <p>
-            Cloud computing has transformed the way businesses operate by providing scalable, on‑demand resources. However, with flexibility comes complexity—dynamic pricing models, tiered discounts, and variable usage patterns can easily lead to unforeseen expenses. FinOps++ is engineered to bring clarity to this complexity by integrating live pricing data (when available) and fallback values from major cloud providers, enabling you to build detailed cost models and forecasts that are essential for strategic budgeting and financial planning.
+            Cloud computing has transformed the way businesses operate by providing scalable, on‑demand resources. However, with flexibility comes complexity—dynamic pricing models, tiered discounts, and variable usage patterns can easily lead to unforeseen expenses. FinOps++ is engineered to bring clarity to this complexity by integrating live pricing data (when available) along with fallback values, enabling you to build detailed cost models and forecasts that are essential for strategic budgeting and financial planning.
           </p>
           <p>
-            This tool breaks down your overall cloud spending into key components such as compute, storage, network, and licensing. By mirroring real-world pricing structures, FinOps++ allows you to see how exceeding certain usage thresholds can trigger discount tiers or drive costs upward, providing you with actionable insights.
+            This tool breaks down your overall cloud spending into key components such as compute, storage, network, and licensing. By mirroring real‑world pricing structures, FinOps++ allows you to see how exceeding certain usage thresholds can trigger discount tiers or drive costs upward, providing you with actionable insights.
           </p>
           <p>
             With robust forecasting capabilities, you can project your cloud expenditures over a 12‑month period based on expected growth rates. The platform also includes Monte Carlo simulations to statistically model uncertainty and risk, while sensitivity analysis identifies which variables have the greatest impact on your overall costs.
@@ -158,19 +154,19 @@
             </li>
             <li>
               <strong>Detailed Cost Modeling:</strong>
-              <br>Input the costs for each cloud service category—compute, storage, network, and licensing—using tiered discount models that mirror your provider’s pricing. This reveals which components drive the majority of your expenses.
+              <br>Input the costs for each cloud service category—compute, storage, network, and licensing—using tiered discount models that mirror your provider’s pricing. This reveals which cost centers are most vulnerable.
             </li>
             <li>
               <strong>Advanced Settings:</strong>
-              <br>Configure advanced parameters like the Auto‑Scaling Factor (to lower compute costs when resources scale efficiently) and Dynamic Pricing Adjustment (to simulate revenue boosts during high‑demand periods). These settings let you experiment with strategies to mitigate overages.
+              <br>Configure advanced parameters like the Auto‑Scaling Factor (to lower compute costs when resources scale efficiently) and the Dynamic Pricing Adjustment (to simulate revenue boosts during high‑demand periods). These settings let you test strategies to mitigate overages.
             </li>
             <li>
               <strong>Deterministic Calculation:</strong>
-              <br>Run the deterministic calculation to obtain key metrics—total revenue, total cost, profit, profit margin, and ROI. This gives you an immediate snapshot of the financial impact of the surge.
+              <br>Run the deterministic calculation to obtain key financial metrics—total revenue, total cost, profit, profit margin, and ROI. This gives you an immediate snapshot of the financial impact.
             </li>
             <li>
               <strong>Forecasting Future Costs:</strong>
-              <br>Use the forecasting module to project your cloud costs over the next 12 months based on your expected monthly growth rate. This projection helps you plan for additional resources or budget adjustments.
+              <br>Use the forecasting module to project your cloud costs over the next 12 months based on your expected monthly growth rate. This helps you plan for additional resources or budget adjustments.
             </li>
             <li>
               <strong>Monte Carlo Simulation:</strong>
@@ -182,7 +178,7 @@
             </li>
           </ol>
           <p>
-            <strong>Outcome:</strong> By following these steps, you gain a clear understanding of the factors behind your unexpected cost overages. This enables you to renegotiate volume discounts, fine‑tune auto‑scaling policies, and revise your budget forecasts—turning a potential crisis into a strategic opportunity.
+            <strong>Outcome:</strong> By following these steps, you gain a clear understanding of your cost drivers. This enables you to renegotiate volume discounts, optimize resource allocation, and revise your budget forecasts—turning potential cost crises into strategic opportunities.
           </p>
         </div>
       </div>
@@ -510,7 +506,7 @@
       </div>
       <div id="simulationSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">Run a Monte Carlo simulation to assess uncertainty in your estimates.</p>
+          <p class="instruction">Run a Monte Carlo simulation to assess uncertainty in your cost and revenue estimates.</p>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="simIterations">Simulation Iterations:</label>
@@ -568,7 +564,7 @@
       </div>
       <div id="exportSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">Generate a PDF report including Deterministic Results, Forecast Chart, Simulation Summary, Sensitivity Analysis, and your Notes.</p>
+          <p class="instruction">Generate a PDF report including Deterministic Results, Forecast Chart, Simulation Summary, Sensitivity Analysis, and User Notes.</p>
           <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
         </div>
       </div>
@@ -603,18 +599,33 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    // Persist inputs and textareas using localStorage
+    // Persist inputs and textareas locally
     function persistInputs() {
       const elements = document.querySelectorAll('input[type="number"], textarea');
       elements.forEach(el => {
         const stored = localStorage.getItem(el.id);
-        if (stored !== null) { el.value = stored; }
+        if (stored !== null) {
+          el.value = stored;
+        }
         el.addEventListener('change', () => { localStorage.setItem(el.id, el.value); });
       });
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
     
-    // ---------- Deterministic Calculation ----------
+    // Helper function: Compute Category Cost
+    function computeCategoryCost(units, baseCost, tier1Threshold, tier1Rate, tier2Threshold, tier2Rate) {
+      if (units <= tier1Threshold) {
+        return units * baseCost;
+      } else if (units <= tier2Threshold) {
+        return tier1Threshold * baseCost + (units - tier1Threshold) * baseCost * (1 - tier1Rate / 100);
+      } else {
+        return tier1Threshold * baseCost +
+               (tier2Threshold - tier1Threshold) * baseCost * (1 - tier1Rate / 100) +
+               (units - tier2Threshold) * baseCost * (1 - tier2Rate / 100);
+      }
+    }
+    
+    // Deterministic Calculation
     document.getElementById('calculateBtn').addEventListener('click', () => {
       const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
       const revenuePerUnit = parseFloat(document.getElementById('revenuePerUnit').value);
@@ -704,12 +715,142 @@ Cost Breakdown:
       });
     });
     
-    // ---------- Sensitivity Analysis ----------
+    // Monte Carlo Simulation
+    document.getElementById('runSimulation').addEventListener('click', () => {
+      const simIterations = parseInt(document.getElementById('simIterations').value);
+      const costVariability = parseFloat(document.getElementById('costVariability').value) / 100;
+      const revenueVariability = parseFloat(document.getElementById('revenueVariability').value) / 100;
+      const revenuePerUnit = parseFloat(document.getElementById('revenuePerUnit').value);
+      const revenueUnits = parseFloat(document.getElementById('revenueUnits').value);
+      const elasticityThresholdRev = parseFloat(document.getElementById('elasticityThresholdRev').value);
+      const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
+      const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
+      const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
+      
+      function getCategoryInputs(idPrefix) {
+        return {
+          fixed: parseFloat(document.getElementById(idPrefix + 'Fixed').value),
+          variable: parseFloat(document.getElementById(idPrefix + 'Variable').value),
+          units: parseFloat(document.getElementById(idPrefix + 'Units').value),
+          tier1Threshold: parseFloat(document.getElementById(idPrefix + 'Tier1Threshold').value),
+          tier1Rate: parseFloat(document.getElementById(idPrefix + 'Tier1Rate').value),
+          tier2Threshold: parseFloat(document.getElementById(idPrefix + 'Tier2Threshold').value),
+          tier2Rate: parseFloat(document.getElementById(idPrefix + 'Tier2Rate').value)
+        };
+      }
+      const computeInputs = getCategoryInputs('compute');
+      const storageInputs = getCategoryInputs('storage');
+      const networkInputs = getCategoryInputs('network');
+      const licenseInputs = getCategoryInputs('license');
+      
+      function getRandomNormal() {
+        let u = 0, v = 0;
+        while(u === 0) u = Math.random();
+        while(v === 0) v = Math.random();
+        return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+      }
+      
+      const simulationProfits = [];
+      for (let i = 0; i < simIterations; i++) {
+        const costMultiplier = 1 + getRandomNormal() * costVariability;
+        const revenueMultiplier = 1 + getRandomNormal() * revenueVariability;
+        
+        const simComputeCost = computeInputs.fixed + computeCategoryCost(
+          computeInputs.units,
+          computeInputs.variable * costMultiplier,
+          computeInputs.tier1Threshold,
+          computeInputs.tier1Rate,
+          computeInputs.tier2Threshold,
+          computeInputs.tier2Rate
+        );
+        const simStorageCost = storageInputs.fixed + computeCategoryCost(
+          storageInputs.units,
+          storageInputs.variable * costMultiplier,
+          storageInputs.tier1Threshold,
+          storageInputs.tier1Rate,
+          storageInputs.tier2Threshold,
+          storageInputs.tier2Rate
+        );
+        const simNetworkCost = networkInputs.fixed + computeCategoryCost(
+          networkInputs.units,
+          networkInputs.variable * costMultiplier,
+          networkInputs.tier1Threshold,
+          networkInputs.tier1Rate,
+          networkInputs.tier2Threshold,
+          networkInputs.tier2Rate
+        );
+        const simLicenseCost = licenseInputs.fixed + computeCategoryCost(
+          licenseInputs.units,
+          licenseInputs.variable * costMultiplier,
+          licenseInputs.tier1Threshold,
+          licenseInputs.tier1Rate,
+          licenseInputs.tier2Threshold,
+          licenseInputs.tier2Rate
+        );
+        const totalSimCost = overallFixedCost + simComputeCost + simStorageCost + simNetworkCost + simLicenseCost;
+        
+        let simEffectiveRevenue = revenuePerUnit * revenueMultiplier;
+        if (revenueUnits > elasticityThresholdRev) {
+          simEffectiveRevenue = Math.max(revenuePerUnit * revenueMultiplier - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
+        }
+        simEffectiveRevenue *= (1 + dynamicPricingAdjustment / 100);
+        const totalSimRevenue = revenueUnits * simEffectiveRevenue;
+        simulationProfits.push(totalSimRevenue - totalSimCost);
+      }
+      
+      const sumProfit = simulationProfits.reduce((a, b) => a + b, 0);
+      const avgProfit = sumProfit / simulationProfits.length;
+      const minProfit = Math.min(...simulationProfits);
+      const maxProfit = Math.max(...simulationProfits);
+      const stdProfit = Math.sqrt(simulationProfits.reduce((a, b) => a + Math.pow(b - avgProfit, 2), 0) / simulationProfits.length);
+      
+      const numBins = 10;
+      const profitRange = maxProfit - minProfit;
+      const binSize = profitRange / numBins;
+      const bins = new Array(numBins).fill(0);
+      const binLabels = [];
+      simulationProfits.forEach(profit => {
+        let binIndex = Math.floor((profit - minProfit) / binSize);
+        if (binIndex === numBins) binIndex = numBins - 1;
+        bins[binIndex]++;
+      });
+      for (let i = 0; i < numBins; i++) {
+        const binCenter = minProfit + binSize * (i + 0.5);
+        binLabels.push(binCenter.toFixed(2));
+      }
+      
+      const simResultsDiv = document.getElementById('simulationResults');
+      simResultsDiv.style.display = 'block';
+      const simText = `Monte Carlo Simulation (over ${simIterations} iterations):
+Average Profit: $${avgProfit.toFixed(2)}
+Minimum Profit: $${minProfit.toFixed(2)}
+Maximum Profit: $${maxProfit.toFixed(2)}
+Standard Deviation: $${stdProfit.toFixed(2)}`;
+      simResultsDiv.innerHTML = `<pre>${simText}</pre>`;
+      
+      const histCtx = document.getElementById('histogramChart').getContext('2d');
+      document.getElementById('histogramChart').style.display = 'block';
+      if (window.myHistChart) window.myHistChart.destroy();
+      window.myHistChart = new Chart(histCtx, {
+        type: 'bar',
+        data: {
+          labels: binLabels,
+          datasets: [{
+            label: 'Profit Frequency',
+            data: bins,
+            backgroundColor: 'rgba(75, 192, 192, 0.6)'
+          }]
+        },
+        options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+      });
+    });
+    
+    // Sensitivity Analysis
     document.getElementById('runSensitivity').addEventListener('click', () => {
       const baseRate = parseFloat(document.getElementById('computeTier1Rate').value);
       const sensitivityData = [];
       const sensitivityLabels = [];
-      // Vary Compute Tier 1 discount from (baseRate - 5) to (baseRate + 5)
+      // Vary Compute Tier 1 discount rate from (baseRate - 5) to (baseRate + 5)
       for (let delta = -5; delta <= 5; delta += 1) {
         const testRate = baseRate + delta;
         const computeFixed = parseFloat(document.getElementById('computeFixed').value);
@@ -718,7 +859,6 @@ Cost Breakdown:
         const computeTier1Threshold = parseFloat(document.getElementById('computeTier1Threshold').value);
         const computeTier2Threshold = parseFloat(document.getElementById('computeTier2Threshold').value);
         const computeTier2Rate = parseFloat(document.getElementById('computeTier2Rate').value);
-        // Recalculate compute cost with modified Tier 1 discount rate
         const modifiedComputeCost = computeFixed + computeCategoryCost(computeUnits, computeVariable, computeTier1Threshold, testRate, computeTier2Threshold, computeTier2Rate);
         
         const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
@@ -732,7 +872,6 @@ Cost Breakdown:
         }
         const totalRevenue = revenueUnits * effectiveRevenuePerUnit;
         
-        // Assume storage, network, and license remain unchanged (use deterministic calc values)
         const storageCost = parseFloat(document.getElementById('storageFixed').value) +
           computeCategoryCost(
             parseFloat(document.getElementById('storageUnits').value),
@@ -775,11 +914,11 @@ Cost Breakdown:
       sensitivityResultsDiv.innerHTML = `<pre>${sensitivityText}</pre>`;
     });
     
-    // ---------- Export Report as PDF ----------
+    // Export Report as PDF
     async function exportReport() {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
-      // Set exported text color to black
+      // Set text color to black for PDF output
       doc.setTextColor(0, 0, 0);
       let yPos = 15;
       
