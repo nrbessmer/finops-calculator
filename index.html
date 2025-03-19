@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ultra‑Sophisticated FinOps Calculator</title>
+  <title>FinOps Xcalculator!</title>
   <!-- Bootstrap CSS for modern styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Google Fonts for a techie monospace look -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
+  <!-- Custom CSS using Tahoma -->
   <style>
     body { 
       background: #121212; 
-      font-family: 'Roboto Mono', monospace; 
+      font-family: Tahoma, sans-serif;
       color: #e0e0e0;
     }
+    /* Header styling */
     .header {
-      background: linear-gradient(135deg, #00f0ff, #ff00f7);
-      color: #121212;
-      padding: 2rem 0;
-      margin-bottom: 2rem;
+      background: #222;
+      color: #f5f5f5;
+      padding: 3rem 0;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      border-bottom: 3px solid #0d6efd;
     }
     .header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
+    .header p {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #ccc;
+    }
+    /* Card styling */
     .section-card { 
       margin-bottom: 2rem; 
       border: 1px solid #333;
@@ -76,12 +82,46 @@
   </style>
 </head>
 <body>
+  <!-- Updated Header -->
   <div class="header">
-    <h1>Ultra‑Sophisticated FinOps Calculator</h1>
+    <h1>FinOps Xcalculator!</h1>
     <p>Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
   </div>
 
   <div class="container">
+    <!-- Variable Explanations Section -->
+    <div class="card section-card">
+      <div class="card-header">Variable Explanations</div>
+      <div class="card-body">
+        <ul>
+          <!-- Overall & Revenue -->
+          <li><strong>Overall Fixed Cost ($):</strong> Base fixed expenses independent of usage.</li>
+          <li><strong>Base Revenue per Unit ($):</strong> Revenue earned from each unit sold or used at the base rate.</li>
+          <li><strong>Revenue Units:</strong> The total number of units sold or utilized.</li>
+          <li><strong>Elasticity Threshold (Revenue Units):</strong> The usage threshold beyond which revenue per unit starts to decrease.</li>
+          <li><strong>Elasticity Factor:</strong> The decrement in revenue per unit for every additional unit beyond the threshold.</li>
+
+          <!-- Cost Categories: Compute, Storage, Network, License -->
+          <li><strong>Fixed Cost (per category):</strong> The constant expense for the service (e.g., server base cost).</li>
+          <li><strong>Variable Cost per Unit:</strong> The cost incurred per unit of service usage.</li>
+          <li><strong>Units:</strong> The measure of usage (e.g., compute hours, GB, seats).</li>
+          <li><strong>Tier 1 Threshold:</strong> The usage limit at which the first discount rate applies.</li>
+          <li><strong>Tier 1 Discount Rate (%):</strong> The percentage discount for usage exceeding the Tier 1 threshold.</li>
+          <li><strong>Tier 2 Threshold:</strong> The usage limit at which a higher discount rate applies.</li>
+          <li><strong>Tier 2 Discount Rate (%):</strong> The percentage discount for usage exceeding the Tier 2 threshold.</li>
+
+          <!-- Forecasting and Simulation -->
+          <li><strong>Monthly Growth Rate (%):</strong> The expected monthly percentage increase in revenue and costs.</li>
+          <li><strong>Simulation Iterations:</strong> The number of runs for Monte Carlo simulation to model uncertainty.</li>
+          <li><strong>Cost Variability (%):</strong> The expected percentage fluctuation in cost estimates.</li>
+          <li><strong>Revenue Variability (%):</strong> The expected percentage fluctuation in revenue estimates.</li>
+
+          <!-- Cloud Pricing Integration -->
+          <li><strong>Live Cloud Pricing:</strong> This section fetches live compute cost data from AWS, Azure, and GCP to update your cost assumptions.</li>
+        </ul>
+      </div>
+    </div>
+
     <!-- Overall & Revenue Inputs Section -->
     <div class="card section-card">
       <div class="card-header">Overall & Revenue Inputs</div>
@@ -95,7 +135,7 @@
         </div>
         <h5>Revenue Inputs</h5>
         <p class="instruction">
-          Provide your base revenue per unit and total revenue units. An elasticity factor will adjust your revenue per unit if usage exceeds a set threshold.
+          Provide your base revenue per unit and total revenue units. An elasticity factor will adjust your revenue per unit if usage exceeds the threshold.
         </p>
         <div class="form-group">
           <label for="revenuePerUnit">Base Revenue per Unit ($):</label>
@@ -295,7 +335,7 @@
       <div class="card-header">Cloud Pricing Integration (Live)</div>
       <div class="card-body">
         <p class="instruction">
-          Click the button below to fetch the latest pricing data from AWS, Azure, and Google Cloud. This data refines your cost assumptions.
+          Click the button below to fetch the latest live compute cost data from AWS, Azure, and Google Cloud. This data updates your cost assumptions in real time.
         </p>
         <button id="fetchCloudPrices" class="btn btn-primary mb-3">Fetch Latest Cloud Prices</button>
         <div id="cloudPricingResults" class="result" style="display:none;"></div>
@@ -380,12 +420,12 @@
         <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
       </div>
     </div>
-  </div>
 
-  <!-- Footer with Contact Info -->
-  <footer>
-    <p>For further inquiries, please reach out to <a href="mailto:info@tullyedmvibe.com">info@tullyedmvibe.com</a></p>
-  </footer>
+    <!-- Footer with Contact Info -->
+    <footer>
+      <p>For further inquiries, please reach out to <a href="mailto:info@tullyedmvibe.com">info@tullyedmvibe.com</a></p>
+    </footer>
+  </div>
 
   <!-- Dependencies: jQuery, Bootstrap JS, Chart.js, jsPDF -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
