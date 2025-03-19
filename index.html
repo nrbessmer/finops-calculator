@@ -6,7 +6,7 @@
   <title>FinOps++</title>
   <!-- Bootstrap CSS for modern styling and collapse functionality -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS with neon green font and dark theme -->
+  <!-- Custom CSS with neon green text, dark theme, and ticker animation -->
   <style>
     body { 
       background: #121212; 
@@ -15,6 +15,23 @@
       padding-bottom: 2rem;
     }
     a { color: #39FF14; }
+    /* Header styling */
+    .header {
+      text-align: center;
+      padding: 3rem 0;
+      border-bottom: 3px solid #0d6efd;
+      margin-bottom: 2rem;
+    }
+    .header h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
     /* Card styling with neon accents */
     .section-card { 
       margin-bottom: 1.5rem; 
@@ -30,11 +47,13 @@
       text-transform: uppercase;
       font-weight: bold;
       border-bottom: 1px solid #333;
+      padding: 0.75rem 1.25rem;
     }
     .card-header:hover { background-color: #0b5ed7; }
     .card-body { 
       background: #1e1e1e; 
       color: #39FF14;
+      padding: 1rem 1.25rem;
     }
     .instruction { 
       font-size: 0.9rem; 
@@ -65,14 +84,33 @@
       color: #39FF14;
       border-top: 1px solid #333;
     }
+    /* Ticker styling */
+    .ticker-container {
+      overflow: hidden;
+      background: #000;
+      border: 1px solid #39FF14;
+      margin-bottom: 1rem;
+    }
+    .ticker {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: ticker 15s linear infinite;
+      font-weight: bold;
+      color: #39FF14;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
   <!-- Header (always visible) -->
   <div class="container">
-    <div class="header text-center" style="padding: 3rem 0; border-bottom: 3px solid #0d6efd; margin-bottom: 2rem;">
-      <h1 style="font-size: 3rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">FinOps++</h1>
-      <p style="font-size: 1.2rem; color: #ccc;">Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
+    <div class="header">
+      <h1>FinOps++</h1>
+      <p>Cost Modeling • Live Cloud Pricing • Forecasting • Simulation • Exportable Reports</p>
     </div>
   </div>
 
@@ -85,22 +123,19 @@
       <div id="overviewSection" class="collapse show">
         <div class="card-body">
           <p>
-            Cloud computing has transformed modern business by providing scalable, on-demand resources—but it has also introduced complex, dynamic pricing structures that can lead to unforeseen expenses. FinOps++ is designed to help you manage these challenges by integrating live (or fallback) pricing data from major cloud providers, enabling you to build detailed cost models and forecasts that are critical for budgeting and strategic planning.
+            Cloud computing has transformed modern business by providing scalable, on-demand resources—but with this flexibility comes complex, dynamic pricing that can lead to unforeseen expenses. FinOps++ is designed to help you manage these challenges by integrating live pricing data (with fallback values to avoid timeouts) from major cloud providers. It empowers you to build detailed cost models, create accurate forecasts, and run sophisticated simulations to ensure that your cloud spending is both predictable and optimized.
           </p>
           <p>
-            With FinOps++, you can decompose your overall cloud spend into granular components such as compute, storage, network, and licensing. The tool supports tiered discount models that accurately reflect real-world pricing schemes, giving you insight into how usage beyond certain thresholds can affect your overall cost structure. This allows you to evaluate various scenarios and negotiate better terms with your providers.
+            By breaking down overall cloud expenditure into granular components such as compute, storage, network, and licensing, FinOps++ allows you to see how usage patterns and tiered discounts impact your bottom line. The platform mirrors real-world pricing models, giving you a clear view of how exceeding thresholds can trigger discount rates or, conversely, drive costs upward.
           </p>
           <p>
-            The platform also offers advanced forecasting capabilities, letting you project costs over a 12‑month period based on expected growth rates. Monte Carlo simulations help quantify the uncertainty and risk inherent in cloud cost estimates by running thousands of iterations, while sensitivity analyses pinpoint which parameters have the most impact on your financial outcomes.
+            With robust forecasting capabilities, you can project costs over a 12‑month period based on anticipated growth. Monte Carlo simulations provide a statistical understanding of risk by running thousands of iterations, while sensitivity analysis helps pinpoint which variables most affect your finances.
           </p>
           <p>
-            FinOps++ is more than just a calculator—it’s an educational tool that demystifies cloud pricing and empowers both IT and finance teams to collaborate effectively. By providing clear variable definitions, practical examples, and advanced simulation tools, FinOps++ transforms cloud cost management from a reactive, ad-hoc process into a strategic, proactive discipline.
+            FinOps++ is not just a calculator—it’s a comprehensive tool that educates both IT and finance teams on the intricacies of cloud pricing. Detailed variable explanations and practical use cases ensure that you understand every aspect of your cost model, enabling data-driven decisions and effective negotiations with cloud providers.
           </p>
           <p>
-            Whether you’re a startup testing your first cloud deployment or a large enterprise optimizing a multi-cloud strategy, FinOps++ equips you with the insights needed to avoid budget overruns, maximize ROI, and make data-driven decisions. It ultimately bridges the gap between technical complexity and financial clarity.
-          </p>
-          <p>
-            Embrace the power of proactive financial management with FinOps++—streamline your cloud operations, mitigate risks, and unlock the full potential of your cloud investments.
+            Whether you are a startup or a large enterprise, FinOps++ offers the insights needed to turn cloud cost management from a reactive process into a proactive strategic advantage, ultimately leading to improved budgeting, reduced financial risk, and enhanced operational efficiency.
           </p>
         </div>
       </div>
@@ -114,43 +149,43 @@
       <div id="useCaseSection" class="collapse show">
         <div class="card-body">
           <p>
-            <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," an e-commerce company that depends on cloud services to host its website, manage customer data, and process transactions. After launching a major marketing campaign, your site experiences a sudden 300% surge in traffic. This spike in demand overwhelms your current cloud resources, resulting in unexpected cost overages that threaten your quarterly budget.
+            <strong>Hypothetical Business Scenario:</strong> Imagine you are the CFO of "CloudSavvy Retail," an e-commerce company relying on cloud services to power its website, manage customer data, and process orders. Following a highly successful marketing campaign, your website traffic surges by 300%, dramatically increasing your consumption of compute, storage, and network resources. This unexpected spike leads to significant cost overages that put your quarterly budget at risk.
           </p>
           <p>
             <strong>Step-by-Step Process Using FinOps++:</strong>
           </p>
           <ol>
             <li>
-              <strong>Baseline Data Entry:</strong>  
-              <br>Begin by entering your fixed operational costs (such as server management fees and software licensing) and your revenue assumptions (average revenue per transaction and projected transaction volume). This sets the foundation of your cost model.
+              <strong>Baseline Data Entry:</strong>
+              <br>Input your fixed operational costs (e.g., management fees, licensing) along with revenue assumptions like average revenue per transaction and expected transaction volume. This establishes your financial baseline.
             </li>
             <li>
-              <strong>Detailed Cost Modeling:</strong>  
-              <br>Input the specific costs for each service category—compute (e.g., server hours), storage (GBs used), network (data transferred), and licensing (software seats). Use tiered discount thresholds to reflect the provider’s pricing model. This breakdown will help you identify which areas are most affected by the sudden surge.
+              <strong>Detailed Cost Modeling:</strong>
+              <br>Break down your cloud spending into categories—compute, storage, network, and licensing—using tiered discount models that match your provider’s pricing. This reveals which cost centers are most sensitive to usage surges.
             </li>
             <li>
-              <strong>Advanced Settings Configuration:</strong>  
-              <br>In the Advanced Settings section, specify parameters such as the Auto‑Scaling Factor (to reduce compute costs when resources are scaled efficiently) and the Dynamic Pricing Adjustment (to simulate a revenue boost under high-demand conditions). These advanced options let you experiment with different strategies to mitigate overages.
+              <strong>Advanced Settings:</strong>
+              <br>In the Advanced Settings section, configure parameters such as the Auto‑Scaling Factor (which lowers compute costs when resources scale efficiently) and the Dynamic Pricing Adjustment (which boosts revenue per unit under high-demand conditions). These settings let you simulate various strategies to control costs.
             </li>
             <li>
-              <strong>Deterministic Calculation:</strong>  
-              <br>Run the deterministic calculation to generate key financial metrics including total revenue, total cost, profit, profit margin, and ROI. This immediate feedback helps you understand the financial impact of the current usage surge.
+              <strong>Deterministic Calculation:</strong>
+              <br>Run the deterministic calculation to get immediate key metrics—total revenue, total cost, profit, profit margin, and ROI. This helps you gauge the impact of the surge and assess if your current strategy is sustainable.
             </li>
             <li>
-              <strong>Forecasting Future Costs:</strong>  
-              <br>Input your expected monthly growth rate and run the 12‑month forecast to see how continued demand spikes could affect future budgets. This forecast assists in proactive planning and resource allocation.
+              <strong>Forecasting Future Costs:</strong>
+              <br>Use the forecasting module to project cloud costs over the next 12 months based on your monthly growth rate. This forecast will show you potential future overages, allowing you to proactively plan for additional resources or budget adjustments.
             </li>
             <li>
-              <strong>Monte Carlo Simulation:</strong>  
-              <br>Execute a Monte Carlo simulation that models thousands of iterations to capture the uncertainty in your cost estimates. The resulting probability distribution of outcomes allows you to quantify the risk of future overages and adjust your contingency funds accordingly.
+              <strong>Monte Carlo Simulation:</strong>
+              <br>Run a Monte Carlo simulation to model uncertainty by executing thousands of iterations. The resulting probability distribution enables you to quantify risk and set aside appropriate contingency funds.
             </li>
             <li>
-              <strong>Sensitivity Analysis:</strong>  
-              <br>Perform sensitivity analysis on key variables such as discount rates or auto‑scaling efficiency. This step helps you identify the most impactful factors, guiding strategic negotiations with your cloud provider and internal process improvements.
+              <strong>Sensitivity Analysis:</strong>
+              <br>Perform sensitivity analysis on key variables such as discount rates and auto-scaling efficiency. This identifies the factors that most influence your costs, guiding you in negotiations and internal policy adjustments.
             </li>
           </ol>
           <p>
-            <strong>Outcome:</strong> By using FinOps++ in this scenario, you gain a detailed understanding of the cost drivers behind the sudden spike in expenses. With this insight, you decide to renegotiate volume discounts with your provider, adjust your auto‑scaling policies to be more responsive, and revise your budget forecasts. This proactive approach not only prevents future cost overages but also strengthens your overall financial management strategy.
+            <strong>Outcome:</strong> By following these steps with FinOps++, you gain a comprehensive understanding of your cloud spending drivers. In response, you negotiate better volume discounts, adjust auto-scaling policies, and refine your budgeting forecasts. This proactive approach transforms a potential crisis into an opportunity for strategic improvement.
           </p>
         </div>
       </div>
@@ -168,14 +203,14 @@
             <li><strong>Base Revenue per Unit ($):</strong> Revenue earned per transaction or service unit at standard rates.</li>
             <li><strong>Revenue Units:</strong> The total number of transactions or service units consumed.</li>
             <li><strong>Elasticity Threshold (Revenue Units):</strong> The usage level at which revenue per unit begins to decline.</li>
-            <li><strong>Elasticity Factor:</strong> The decrease in revenue per unit for each unit beyond the threshold.</li>
+            <li><strong>Elasticity Factor:</strong> The decrease in revenue per unit for each additional unit beyond the threshold.</li>
             <li><strong>Fixed Cost (per category):</strong> Constant costs associated with a service area (compute, storage, network, licensing).</li>
             <li><strong>Variable Cost per Unit:</strong> Costs that increase with usage (e.g., per compute hour or per GB stored).</li>
             <li><strong>Tier 1 &amp; Tier 2 Thresholds:</strong> Usage limits that trigger discounted pricing rates.</li>
             <li><strong>Tier 1 &amp; Tier 2 Discount Rates (%):</strong> Percentage discounts applied when usage exceeds the defined thresholds.</li>
-            <li><strong>Monthly Growth Rate (%):</strong> Expected monthly increase in usage and costs.</li>
-            <li><strong>Simulation Iterations:</strong> The number of runs in a Monte Carlo simulation to model uncertainty.</li>
-            <li><strong>Cost &amp; Revenue Variability (%):</strong> Anticipated fluctuations in costs and revenues due to market changes.</li>
+            <li><strong>Monthly Growth Rate (%):</strong> Expected month-over-month increase in usage and costs.</li>
+            <li><strong>Simulation Iterations:</strong> Number of runs in a Monte Carlo simulation to model uncertainty.</li>
+            <li><strong>Cost &amp; Revenue Variability (%):</strong> Anticipated fluctuations in costs and revenues due to market conditions.</li>
             <li><strong>Live Cloud Pricing:</strong> Real-time pricing data (or fallback static values) from major cloud providers.</li>
           </ul>
         </div>
@@ -436,7 +471,7 @@
       </div>
     </div>
 
-    <!-- Cloud Pricing Integration Section -->
+    <!-- Cloud Pricing Integration Section with Ticker -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#cloudPricingSection" aria-expanded="true" aria-controls="cloudPricingSection">
         Cloud Pricing Integration (Live)
@@ -444,10 +479,16 @@
       <div id="cloudPricingSection" class="collapse show">
         <div class="card-body">
           <p class="instruction">
-            Click the button below to fetch the latest pricing data. Due to timeout issues with the official endpoints, we are using fallback static pricing values.
+            Click the button below to fetch the latest pricing data. Due to timeout issues with official endpoints, fallback static pricing values are used.
           </p>
           <button id="fetchCloudPrices" class="btn btn-primary mb-3">Fetch Latest Cloud Prices</button>
           <div id="cloudPricingResults" class="result" style="display:none;"></div>
+          <!-- Ticker for Cloud Pricing -->
+          <div class="ticker-container">
+            <div id="pricingTicker" class="ticker">
+              Loading pricing ticker...
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -576,7 +617,7 @@
     </footer>
   </div>
 
-  <!-- Dependencies: jQuery, Bootstrap JS (for collapse functionality), Chart.js, jsPDF -->
+  <!-- Dependencies: jQuery, Bootstrap JS (for collapse), Chart.js, jsPDF -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -594,15 +635,14 @@
     window.addEventListener('DOMContentLoaded', persistInputs);
 
     // ---------- Cloud Pricing Fetch Functions (Fallback Static Values) ----------
-    // Due to timeout exceptions with official endpoints, we use fallback static pricing.
     async function fetchAWSComputePrice() {
-      return "0.13"; // Fallback price for compute (e.g., t2.micro)
+      return "0.13"; // Fallback static price for compute (t2.micro)
     }
     async function fetchAWSStoragePrice() {
-      return "0.05"; // Fallback price for S3 Standard storage per GB
+      return "0.05"; // Fallback static price for S3 Standard (per GB)
     }
     async function fetchAWSNetworkPrice() {
-      return "0.09"; // Fallback price for Data Transfer Out per GB
+      return "0.09"; // Fallback static price for Data Transfer Out (per GB)
     }
     document.getElementById('fetchCloudPrices').addEventListener('click', async () => {
       const resultsDiv = document.getElementById('cloudPricingResults');
@@ -620,8 +660,13 @@
         html += `<tr><td>Network (Data Transfer Out)</td><td>${awsNetwork}</td></tr>`;
         html += '</tbody></table>';
         resultsDiv.innerHTML = html;
+        
+        // Update ticker text with fallback pricing data
+        const tickerText = `AWS Compute: $${awsCompute} | AWS Storage: $${awsStorage} per GB | AWS Network: $${awsNetwork} per GB`;
+        document.getElementById('pricingTicker').innerText = tickerText;
       } catch (error) {
         resultsDiv.innerHTML = '<p>Error fetching cloud pricing data.</p>';
+        document.getElementById('pricingTicker').innerText = "Error fetching pricing.";
       }
     });
 
@@ -820,7 +865,7 @@
       const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
       const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
 
-      // Advanced input for dynamic pricing adjustment
+      // Advanced dynamic pricing adjustment
       const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
 
       function getCategoryInputs(idPrefix) {
