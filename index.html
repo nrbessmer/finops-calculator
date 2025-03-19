@@ -6,7 +6,7 @@
   <title>FinOps++</title>
   <!-- Bootstrap CSS for styling and collapse functionality -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS with neon green styling, dark theme, and ticker animation -->
+  <!-- Custom CSS with neon green styling, dark theme -->
   <style>
     body { 
       background: #121212; 
@@ -15,12 +15,16 @@
       padding-bottom: 2rem;
     }
     /* Non-heading text normal weight */
-    p, li, label, input, button, textarea { font-weight: normal; }
+    p, li, label, input, button, textarea { 
+      font-weight: normal; 
+    }
     a { 
       color: #39FF14; 
       text-decoration: none;
     }
-    a:hover { text-decoration: underline; }
+    a:hover { 
+      text-decoration: underline; 
+    }
     /* Header styling */
     .header {
       text-align: center;
@@ -56,7 +60,9 @@
       padding: 0.75rem 1.25rem;
       border-bottom: 1px solid #333;
     }
-    .card-header:hover { background-color: #0b5ed7; }
+    .card-header:hover { 
+      background-color: #0b5ed7; 
+    }
     .card-body { 
       background: #1e1e1e; 
       color: #39FF14;
@@ -90,27 +96,6 @@
       color: #39FF14;
       border-top: 1px solid #333;
     }
-    /* Ticker styling */
-    .ticker-container {
-      overflow: hidden;
-      background: #000;
-      border: 1px solid #39FF14;
-      margin-bottom: 1rem;
-      height: 2em;
-    }
-    .ticker {
-      display: inline-block;
-      white-space: nowrap;
-      padding-left: 100%;
-      animation: ticker 15s linear infinite;
-      font-weight: normal;
-      color: #39FF14;
-      line-height: 2em;
-    }
-    @keyframes ticker {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
     /* Extra spacing for exported PDF */
     .export-margin { margin-bottom: 12px; }
   </style>
@@ -133,10 +118,10 @@
       <div id="overviewSection" class="collapse show">
         <div class="card-body">
           <p>
-            Cloud computing offers scalable, on-demand resources—but its dynamic pricing and tiered discounts can lead to unexpected expenses. FinOps++ integrates fallback pricing data from AWS, Azure, and GCP so you can build accurate cost models and forecasts for strategic budgeting.
+            Cloud computing offers scalable, on‑demand resources—but its dynamic pricing and tiered discount models can lead to unexpected expenses. FinOps++ helps you build detailed cost models and forecasts for strategic budgeting.
           </p>
           <p>
-            Break down your spending into compute, storage, network, and licensing costs. Advanced settings let you simulate auto‑scaling and dynamic pricing adjustments. With forecasting, Monte Carlo simulations, and sensitivity analysis, you gain actionable insights to prevent cost overruns.
+            Break down your spend into compute, storage, network, and licensing costs. Advanced settings let you simulate auto‑scaling and dynamic pricing adjustments. With forecasting, Monte Carlo simulations, and sensitivity analysis, you gain actionable insights to prevent budget overruns.
           </p>
         </div>
       </div>
@@ -150,17 +135,17 @@
       <div id="useCaseSection" class="collapse show">
         <div class="card-body">
           <p>
-            <strong>Scenario:</strong> As the CFO of "CloudSavvy Retail," a marketing campaign causes a 300% surge in traffic that overwhelms your cloud resources.
+            <strong>Scenario:</strong> As the CFO of "CloudSavvy Retail," a marketing campaign triggers a 300% surge in traffic that overwhelms your cloud resources.
           </p>
           <ol>
-            <li><strong>Data Entry:</strong> Input fixed costs and revenue assumptions to set a baseline.</li>
-            <li><strong>Cost Modeling:</strong> Enter detailed costs for compute, storage, network, and licensing using tiered discounts.</li>
-            <li><strong>Advanced Settings:</strong> Adjust auto‑scaling and dynamic pricing to simulate cost-saving strategies.</li>
-            <li><strong>Calculations &amp; Forecasting:</strong> Run deterministic calculations and 12‑month forecasts to gauge impact and plan budgets.</li>
+            <li><strong>Data Entry:</strong> Enter fixed costs and revenue assumptions to establish a baseline.</li>
+            <li><strong>Cost Modeling:</strong> Input detailed costs for compute, storage, network, and licensing using tiered discounts.</li>
+            <li><strong>Advanced Settings:</strong> Adjust auto‑scaling and dynamic pricing parameters to simulate cost‑saving strategies.</li>
+            <li><strong>Calculations &amp; Forecasting:</strong> Run deterministic calculations and 12‑month forecasts to gauge financial impact.</li>
             <li><strong>Simulations &amp; Sensitivity:</strong> Use Monte Carlo simulations and sensitivity analysis to quantify risk and identify key cost drivers.</li>
           </ol>
           <p>
-            <strong>Outcome:</strong> With clear insights, you renegotiate volume discounts, optimize resource allocation, and adjust forecasts to prevent future overages.
+            <strong>Outcome:</strong> With clear insights, you renegotiate discounts, optimize resource allocation, and adjust forecasts to prevent future overages.
           </p>
         </div>
       </div>
@@ -174,12 +159,12 @@
       <div id="variableSection" class="collapse show">
         <div class="card-body">
           <ul>
-            <li><strong>Overall Fixed Cost ($):</strong> Constant baseline expenses.</li>
+            <li><strong>Overall Fixed Cost ($):</strong> Baseline constant expenses.</li>
             <li><strong>Base Revenue per Unit ($):</strong> Revenue per unit at standard rates.</li>
             <li><strong>Revenue Units:</strong> Total units consumed.</li>
             <li><strong>Elasticity Threshold:</strong> Usage level where revenue per unit declines.</li>
-            <li><strong>Elasticity Factor:</strong> Decrease in revenue per additional unit beyond the threshold.</li>
-            <li><strong>Fixed &amp; Variable Costs:</strong> Costs for compute, storage, network, and licensing, with tiered discounts.</li>
+            <li><strong>Elasticity Factor:</strong> Decrease in revenue per additional unit beyond threshold.</li>
+            <li><strong>Cost Categories:</strong> Fixed and variable costs for compute, storage, network, and licensing.</li>
             <li><strong>Monthly Growth Rate:</strong> Expected increase in usage and costs month-over-month.</li>
             <li><strong>Simulation Iterations:</strong> Number of runs in Monte Carlo simulation.</li>
             <li><strong>Cost &amp; Revenue Variability:</strong> Expected fluctuations due to market conditions.</li>
@@ -195,17 +180,13 @@
       </div>
       <div id="inputsSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Enter your overall fixed costs and revenue assumptions.
-          </p>
+          <p class="instruction">Enter your overall fixed costs and revenue assumptions.</p>
           <div class="form-group">
             <label for="overallFixedCost">Overall Fixed Cost ($):</label>
             <input type="number" id="overallFixedCost" class="form-control" value="1000" step="any">
           </div>
           <h5>Revenue Inputs</h5>
-          <p class="instruction">
-            Provide your base revenue per unit and total revenue units.
-          </p>
+          <p class="instruction">Provide your base revenue per unit and total revenue units.</p>
           <div class="form-group">
             <label for="revenuePerUnit">Base Revenue per Unit ($):</label>
             <input type="number" id="revenuePerUnit" class="form-control" value="25" step="any">
@@ -425,9 +406,7 @@
       </div>
       <div id="advancedSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Adjust advanced parameters to optimize your cost model.
-          </p>
+          <p class="instruction">Adjust advanced parameters to optimize your cost model.</p>
           <div class="form-group">
             <label for="autoScalingFactor">Auto-Scaling Factor (%) [reduces compute cost]:</label>
             <input type="number" id="autoScalingFactor" class="form-control" value="0" step="any">
@@ -440,7 +419,7 @@
       </div>
     </div>
 
-    <!-- Cloud Pricing Integration Section with Ticker (Exported) -->
+    <!-- Cloud Pricing Integration Section (Exported) -->
     <div class="card section-card">
       <div class="card-header" data-toggle="collapse" data-target="#cloudPricingSection" aria-expanded="true" aria-controls="cloudPricingSection">
         Cloud Pricing Integration (Live)
@@ -448,16 +427,8 @@
       <div id="cloudPricingSection" class="collapse show">
         <div class="card-body">
           <p class="instruction">
-            Click to fetch fallback static pricing for AWS, Azure, and GCP.
+            Live pricing integration is not available at this time. Please refer to the Official Pricing Resources below.
           </p>
-          <button id="fetchCloudPrices" class="btn btn-primary mb-3">Fetch Latest Cloud Prices</button>
-          <div id="cloudPricingResults" class="result export-margin" style="display:none;"></div>
-          <!-- Ticker for Cloud Pricing -->
-          <div class="ticker-container">
-            <div id="pricingTicker" class="ticker">
-              Loading pricing ticker...
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -469,9 +440,7 @@
       </div>
       <div id="forecastSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Enter your expected monthly growth rate to project revenue, costs, and profit.
-          </p>
+          <p class="instruction">Enter your expected monthly growth rate to project revenue, costs, and profit.</p>
           <div class="form-group">
             <label for="monthlyGrowth">Monthly Growth Rate (%):</label>
             <input type="number" id="monthlyGrowth" class="form-control" value="5" step="any">
@@ -489,9 +458,7 @@
       </div>
       <div id="deterministicSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Click to calculate key financial metrics and view a cost breakdown.
-          </p>
+          <p class="instruction">Click to calculate key financial metrics and view a cost breakdown.</p>
           <button id="calculateBtn" class="btn btn-warning mb-3">Calculate Deterministic Metrics</button>
           <div id="deterministicResults" class="result export-margin" style="display:none;"></div>
           <canvas id="pieChart" width="400" height="200" style="display:none;"></canvas>
@@ -506,9 +473,7 @@
       </div>
       <div id="simulationSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Run a Monte Carlo simulation to assess uncertainty in your cost and revenue estimates.
-          </p>
+          <p class="instruction">Run a Monte Carlo simulation to assess uncertainty in your cost and revenue estimates.</p>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="simIterations">Simulation Iterations:</label>
@@ -537,9 +502,7 @@
       </div>
       <div id="sensitivitySection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Vary the Compute Tier 1 discount rate and observe its effect on profit.
-          </p>
+          <p class="instruction">Vary the Compute Tier 1 discount rate and observe its effect on profit.</p>
           <button id="runSensitivity" class="btn btn-info mb-3">Run Sensitivity Analysis</button>
           <div id="sensitivityResults" class="result export-margin" style="display:none;"></div>
         </div>
@@ -553,12 +516,23 @@
       </div>
       <div id="notesSection" class="collapse show">
         <div class="card-body">
-          <p class="instruction">
-            Enter any notes here. They will be saved locally and included in the exported report.
-          </p>
+          <p class="instruction">Enter any notes here. These will be saved locally and included in the exported report.</p>
           <div class="form-group">
             <textarea id="userNotes" class="form-control" rows="4" placeholder="Enter your notes here..."></textarea>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Export Report Section (Exported) -->
+    <div class="card section-card">
+      <div class="card-header" data-toggle="collapse" data-target="#exportSection" aria-expanded="true" aria-controls="exportSection">
+        Export Report
+      </div>
+      <div id="exportSection" class="collapse show">
+        <div class="card-body">
+          <p class="instruction">Generate a PDF report including Deterministic Results, Forecast Chart, Simulation Summary, Sensitivity Analysis, and your Notes.</p>
+          <button id="exportReportBtn" class="btn btn-secondary">Export Report as PDF</button>
         </div>
       </div>
     </div>
@@ -570,9 +544,7 @@
       </div>
       <div id="pricingResourcesSection" class="collapse show">
         <div class="card-body">
-          <p>
-            For the most accurate pricing, please refer to:
-          </p>
+          <p>For the most accurate pricing, please refer to:</p>
           <ul>
             <li><a href="https://aws.amazon.com/pricing/" target="_blank">AWS Pricing</a></li>
             <li><a href="https://azure.microsoft.com/en-us/pricing/" target="_blank">Azure Pricing</a></li>
@@ -594,7 +566,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    // ---------- Persist inputs and textareas to localStorage ----------
+    // Persist inputs and textareas locally
     function persistInputs() {
       const elements = document.querySelectorAll('input[type="number"], textarea');
       elements.forEach(el => {
@@ -604,44 +576,6 @@
       });
     }
     window.addEventListener('DOMContentLoaded', persistInputs);
-
-    // ---------- Cloud Pricing Fetch Functions (Fallback Static Values) ----------
-    async function fetchAWSComputePrice() { return "0.13"; }
-    async function fetchAWSStoragePrice() { return "0.05"; }
-    async function fetchAWSNetworkPrice() { return "0.09"; }
-    async function fetchAzureComputePrice() { return "0.14"; }
-    async function fetchAzureStoragePrice() { return "0.06"; }
-    async function fetchAzureNetworkPrice() { return "0.10"; }
-    async function fetchGCPComputePrice() { return "0.12"; }
-    async function fetchGCPStoragePrice() { return "0.04"; }
-    async function fetchGCPNetworkPrice() { return "0.08"; }
-    
-    document.getElementById('fetchCloudPrices').addEventListener('click', async () => {
-      const resultsDiv = document.getElementById('cloudPricingResults');
-      resultsDiv.style.display = 'block';
-      resultsDiv.innerHTML = '<p>Fetching fallback cloud pricing…</p>';
-      try {
-        const prices = await Promise.all([
-          fetchAWSComputePrice(), fetchAWSStoragePrice(), fetchAWSNetworkPrice(),
-          fetchAzureComputePrice(), fetchAzureStoragePrice(), fetchAzureNetworkPrice(),
-          fetchGCPComputePrice(), fetchGCPStoragePrice(), fetchGCPNetworkPrice()
-        ]);
-        const [awsCompute, awsStorage, awsNetwork, azureCompute, azureStorage, azureNetwork, gcpCompute, gcpStorage, gcpNetwork] = prices;
-        let html = '<h5 class="export-margin">Fallback Cloud Prices:</h5>';
-        html += '<table class="table table-bordered"><thead><tr><th>Provider</th><th>Compute</th><th>Storage (per GB)</th><th>Network (per GB)</th></tr></thead><tbody>';
-        html += `<tr><td>AWS</td><td>$${awsCompute}</td><td>$${awsStorage}</td><td>$${awsNetwork}</td></tr>`;
-        html += `<tr><td>Azure</td><td>$${azureCompute}</td><td>$${azureStorage}</td><td>$${azureNetwork}</td></tr>`;
-        html += `<tr><td>GCP</td><td>$${gcpCompute}</td><td>$${gcpStorage}</td><td>$${gcpNetwork}</td></tr>`;
-        html += '</tbody></table>';
-        resultsDiv.innerHTML = html;
-        
-        const tickerText = `AWS: Compute $${awsCompute}, Storage $${awsStorage}/GB, Network $${awsNetwork}/GB | Azure: Compute $${azureCompute}, Storage $${azureStorage}/GB, Network $${azureNetwork}/GB | GCP: Compute $${gcpCompute}, Storage $${gcpStorage}/GB, Network $${gcpNetwork}/GB`;
-        document.getElementById('pricingTicker').innerText = tickerText;
-      } catch (error) {
-        resultsDiv.innerHTML = '<p>Error fetching cloud pricing data.</p>';
-        document.getElementById('pricingTicker').innerText = "Error fetching pricing.";
-      }
-    });
     
     // ---------- Helper: Compute Category Cost ----------
     function computeCategoryCost(units, baseCost, tier1Threshold, tier1Rate, tier2Threshold, tier2Rate) {
@@ -746,211 +680,82 @@ Cost Breakdown:
       });
     });
     
-    // ---------- Forecasting (12‑Month Projection) ----------
-    document.getElementById('runForecast').addEventListener('click', () => {
-      const months = 12;
-      const monthlyGrowth = parseFloat(document.getElementById('monthlyGrowth').value) / 100;
-      const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
-      const revenuePerUnit = parseFloat(document.getElementById('revenuePerUnit').value);
-      const revenueUnits = parseFloat(document.getElementById('revenueUnits').value);
-      const elasticityThresholdRev = parseFloat(document.getElementById('elasticityThresholdRev').value);
-      const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
-      const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
-      
-      function getBaselineCost(idPrefix) {
-        const fixed = parseFloat(document.getElementById(idPrefix + 'Fixed').value);
-        const variable = parseFloat(document.getElementById(idPrefix + 'Variable').value);
-        const units = parseFloat(document.getElementById(idPrefix + 'Units').value);
-        const tier1Threshold = parseFloat(document.getElementById(idPrefix + 'Tier1Threshold').value);
-        const tier1Rate = parseFloat(document.getElementById(idPrefix + 'Tier1Rate').value);
-        const tier2Threshold = parseFloat(document.getElementById(idPrefix + 'Tier2Threshold').value);
-        const tier2Rate = parseFloat(document.getElementById(idPrefix + 'Tier2Rate').value);
-        return fixed + computeCategoryCost(units, variable, tier1Threshold, tier1Rate, tier2Threshold, tier2Rate);
-      }
-      const computeCostBase = getBaselineCost('compute');
-      const storageCostBase = getBaselineCost('storage');
-      const networkCostBase = getBaselineCost('network');
-      const licenseCostBase = getBaselineCost('license');
-      const overallCostBase = overallFixedCost + computeCostBase + storageCostBase + networkCostBase + licenseCostBase;
-      
-      let forecastMonths = [];
-      let forecastRevenue = [];
-      let forecastCost = [];
-      let forecastProfit = [];
-      
-      let currentRevenueUnits = revenueUnits;
-      let currentOverallCost = overallCostBase;
-      for (let m = 0; m <= months; m++) {
+    // ---------- Sensitivity Analysis ----------
+    document.getElementById('runSensitivity').addEventListener('click', () => {
+      const baseRate = parseFloat(document.getElementById('computeTier1Rate').value);
+      const sensitivityData = [];
+      const sensitivityLabels = [];
+      // Vary Compute Tier 1 discount from (base - 5) to (base + 5)
+      for (let delta = -5; delta <= 5; delta += 1) {
+        const testRate = baseRate + delta;
+        const computeFixed = parseFloat(document.getElementById('computeFixed').value);
+        const computeVariable = parseFloat(document.getElementById('computeVariable').value);
+        const computeUnits = parseFloat(document.getElementById('computeUnits').value);
+        const computeTier1Threshold = parseFloat(document.getElementById('computeTier1Threshold').value);
+        const computeTier2Threshold = parseFloat(document.getElementById('computeTier2Threshold').value);
+        const computeTier2Rate = parseFloat(document.getElementById('computeTier2Rate').value);
+        // Recalculate compute cost with modified Tier 1 discount rate
+        const modifiedComputeCost = computeFixed + computeCategoryCost(computeUnits, computeVariable, computeTier1Threshold, testRate, computeTier2Threshold, computeTier2Rate);
+        
+        const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
+        const revenuePerUnit = parseFloat(document.getElementById('revenuePerUnit').value);
+        const revenueUnits = parseFloat(document.getElementById('revenueUnits').value);
+        const elasticityThresholdRev = parseFloat(document.getElementById('elasticityThresholdRev').value);
+        const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
         let effectiveRevenuePerUnit = revenuePerUnit;
-        if (currentRevenueUnits > elasticityThresholdRev) {
-          effectiveRevenuePerUnit = Math.max(revenuePerUnit - elasticityFactorRev * (currentRevenueUnits - elasticityThresholdRev), 0);
-        }
-        effectiveRevenuePerUnit *= (1 + dynamicPricingAdjustment / 100);
-        const totalRev = currentRevenueUnits * effectiveRevenuePerUnit;
-        forecastMonths.push("Month " + m);
-        forecastRevenue.push(totalRev);
-        forecastCost.push(currentOverallCost);
-        forecastProfit.push(totalRev - currentOverallCost);
-        
-        currentRevenueUnits *= (1 + monthlyGrowth);
-        currentOverallCost *= (1 + monthlyGrowth);
-      }
-      
-      const forecastCtx = document.getElementById('forecastChart').getContext('2d');
-      document.getElementById('forecastChart').style.display = 'block';
-      if (window.myForecastChart) window.myForecastChart.destroy();
-      window.myForecastChart = new Chart(forecastCtx, {
-        type: 'line',
-        data: {
-          labels: forecastMonths,
-          datasets: [
-            { label: 'Revenue', data: forecastRevenue, borderColor: 'rgba(75, 192, 192, 1)', fill: false },
-            { label: 'Cost', data: forecastCost, borderColor: 'rgba(255, 99, 132, 1)', fill: false },
-            { label: 'Profit', data: forecastProfit, borderColor: 'rgba(54, 162, 235, 1)', fill: false }
-          ]
-        },
-        options: {
-          plugins: { legend: { position: 'bottom' } },
-          scales: { y: { beginAtZero: true } }
-        }
-      });
-    });
-    
-    // ---------- Monte Carlo Simulation ----------
-    document.getElementById('runSimulation').addEventListener('click', () => {
-      const simIterations = parseInt(document.getElementById('simIterations').value);
-      const costVariability = parseFloat(document.getElementById('costVariability').value) / 100;
-      const revenueVariability = parseFloat(document.getElementById('revenueVariability').value) / 100;
-      const revenuePerUnit = parseFloat(document.getElementById('revenuePerUnit').value);
-      const revenueUnits = parseFloat(document.getElementById('revenueUnits').value);
-      const elasticityThresholdRev = parseFloat(document.getElementById('elasticityThresholdRev').value);
-      const elasticityFactorRev = parseFloat(document.getElementById('elasticityFactorRev').value);
-      const overallFixedCost = parseFloat(document.getElementById('overallFixedCost').value);
-      const dynamicPricingAdjustment = parseFloat(document.getElementById('dynamicPricingAdjustment').value);
-      
-      function getCategoryInputs(idPrefix) {
-        return {
-          fixed: parseFloat(document.getElementById(idPrefix + 'Fixed').value),
-          variable: parseFloat(document.getElementById(idPrefix + 'Variable').value),
-          units: parseFloat(document.getElementById(idPrefix + 'Units').value),
-          tier1Threshold: parseFloat(document.getElementById(idPrefix + 'Tier1Threshold').value),
-          tier1Rate: parseFloat(document.getElementById(idPrefix + 'Tier1Rate').value),
-          tier2Threshold: parseFloat(document.getElementById(idPrefix + 'Tier2Threshold').value),
-          tier2Rate: parseFloat(document.getElementById(idPrefix + 'Tier2Rate').value)
-        };
-      }
-      const computeInputs = getCategoryInputs('compute');
-      const storageInputs = getCategoryInputs('storage');
-      const networkInputs = getCategoryInputs('network');
-      const licenseInputs = getCategoryInputs('license');
-      
-      function getRandomNormal() {
-        let u = 0, v = 0;
-        while(u === 0) u = Math.random();
-        while(v === 0) v = Math.random();
-        return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-      }
-      
-      const simulationProfits = [];
-      for (let i = 0; i < simIterations; i++) {
-        const costMultiplier = 1 + getRandomNormal() * costVariability;
-        const revenueMultiplier = 1 + getRandomNormal() * revenueVariability;
-        
-        const simComputeCost = computeInputs.fixed + computeCategoryCost(
-          computeInputs.units,
-          computeInputs.variable * costMultiplier,
-          computeInputs.tier1Threshold,
-          computeInputs.tier1Rate,
-          computeInputs.tier2Threshold,
-          computeInputs.tier2Rate
-        );
-        const simStorageCost = storageInputs.fixed + computeCategoryCost(
-          storageInputs.units,
-          storageInputs.variable * costMultiplier,
-          storageInputs.tier1Threshold,
-          storageInputs.tier1Rate,
-          storageInputs.tier2Threshold,
-          storageInputs.tier2Rate
-        );
-        const simNetworkCost = networkInputs.fixed + computeCategoryCost(
-          networkInputs.units,
-          networkInputs.variable * costMultiplier,
-          networkInputs.tier1Threshold,
-          networkInputs.tier1Rate,
-          networkInputs.tier2Threshold,
-          networkInputs.tier2Rate
-        );
-        const simLicenseCost = licenseInputs.fixed + computeCategoryCost(
-          licenseInputs.units,
-          licenseInputs.variable * costMultiplier,
-          licenseInputs.tier1Threshold,
-          licenseInputs.tier1Rate,
-          licenseInputs.tier2Threshold,
-          licenseInputs.tier2Rate
-        );
-        const totalSimCost = overallFixedCost + simComputeCost + simStorageCost + simNetworkCost + simLicenseCost;
-        
-        let simEffectiveRevenue = revenuePerUnit * revenueMultiplier;
         if (revenueUnits > elasticityThresholdRev) {
-          simEffectiveRevenue = Math.max(revenuePerUnit * revenueMultiplier - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
+          effectiveRevenuePerUnit = Math.max(revenuePerUnit - elasticityFactorRev * (revenueUnits - elasticityThresholdRev), 0);
         }
-        simEffectiveRevenue *= (1 + dynamicPricingAdjustment / 100);
-        const totalSimRevenue = revenueUnits * simEffectiveRevenue;
-        simulationProfits.push(totalSimRevenue - totalSimCost);
+        const totalRevenue = revenueUnits * effectiveRevenuePerUnit;
+        
+        // Assume storage, network, and license remain unchanged
+        const storageCost = parseFloat(document.getElementById('storageFixed').value) +
+          computeCategoryCost(
+            parseFloat(document.getElementById('storageUnits').value),
+            parseFloat(document.getElementById('storageVariable').value),
+            parseFloat(document.getElementById('storageTier1Threshold').value),
+            parseFloat(document.getElementById('storageTier1Rate').value),
+            parseFloat(document.getElementById('storageTier2Threshold').value),
+            parseFloat(document.getElementById('storageTier2Rate').value)
+          );
+        const networkCost = parseFloat(document.getElementById('networkFixed').value) +
+          computeCategoryCost(
+            parseFloat(document.getElementById('networkUnits').value),
+            parseFloat(document.getElementById('networkVariable').value),
+            parseFloat(document.getElementById('networkTier1Threshold').value),
+            parseFloat(document.getElementById('networkTier1Rate').value),
+            parseFloat(document.getElementById('networkTier2Threshold').value),
+            parseFloat(document.getElementById('networkTier2Rate').value)
+          );
+        const licenseCost = parseFloat(document.getElementById('licenseFixed').value) +
+          computeCategoryCost(
+            parseFloat(document.getElementById('licenseUnits').value),
+            parseFloat(document.getElementById('licenseVariable').value),
+            parseFloat(document.getElementById('licenseTier1Threshold').value),
+            parseFloat(document.getElementById('licenseTier1Rate').value),
+            parseFloat(document.getElementById('licenseTier2Threshold').value),
+            parseFloat(document.getElementById('licenseTier2Rate').value)
+          );
+        const totalCost = overallFixedCost + modifiedComputeCost + storageCost + networkCost + licenseCost;
+        const profit = totalRevenue - totalCost;
+        sensitivityData.push(profit);
+        sensitivityLabels.push(testRate.toFixed(2) + "%");
       }
       
-      const sumProfit = simulationProfits.reduce((a, b) => a + b, 0);
-      const avgProfit = sumProfit / simulationProfits.length;
-      const minProfit = Math.min(...simulationProfits);
-      const maxProfit = Math.max(...simulationProfits);
-      const stdProfit = Math.sqrt(simulationProfits.reduce((a, b) => a + Math.pow(b - avgProfit, 2), 0) / simulationProfits.length);
-      
-      const numBins = 10;
-      const profitRange = maxProfit - minProfit;
-      const binSize = profitRange / numBins;
-      const bins = new Array(numBins).fill(0);
-      const binLabels = [];
-      simulationProfits.forEach(profit => {
-        let binIndex = Math.floor((profit - minProfit) / binSize);
-        if (binIndex === numBins) binIndex = numBins - 1;
-        bins[binIndex]++;
+      const sensitivityResultsDiv = document.getElementById('sensitivityResults');
+      sensitivityResultsDiv.style.display = 'block';
+      let sensitivityText = "Sensitivity Analysis: Profit vs. Compute Tier 1 Discount Rate\n";
+      sensitivityLabels.forEach((label, i) => {
+        sensitivityText += `${label}: $${sensitivityData[i].toFixed(2)}\n`;
       });
-      for (let i = 0; i < numBins; i++) {
-        const binCenter = minProfit + binSize * (i + 0.5);
-        binLabels.push(binCenter.toFixed(2));
-      }
-      
-      const simResultsDiv = document.getElementById('simulationResults');
-      simResultsDiv.style.display = 'block';
-      const simText = `Monte Carlo Simulation (over ${simIterations} iterations):
-Average Profit: $${avgProfit.toFixed(2)}
-Minimum Profit: $${minProfit.toFixed(2)}
-Maximum Profit: $${maxProfit.toFixed(2)}
-Standard Deviation: $${stdProfit.toFixed(2)}`;
-      simResultsDiv.innerHTML = `<pre>${simText}</pre>`;
-      
-      const histCtx = document.getElementById('histogramChart').getContext('2d');
-      document.getElementById('histogramChart').style.display = 'block';
-      if (window.myHistChart) window.myHistChart.destroy();
-      window.myHistChart = new Chart(histCtx, {
-        type: 'bar',
-        data: {
-          labels: binLabels,
-          datasets: [{
-            label: 'Profit Frequency',
-            data: bins,
-            backgroundColor: 'rgba(153, 102, 255, 0.6)'
-          }]
-        },
-        options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-      });
+      sensitivityResultsDiv.innerHTML = `<pre>${sensitivityText}</pre>`;
     });
     
     // ---------- Export Report as PDF ----------
     async function exportReport() {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
-      // Set exported text color to cyan
+      // Set text color to cyan for PDF output
       doc.setTextColor(0, 255, 255);
       let yPos = 15;
       
